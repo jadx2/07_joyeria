@@ -1,6 +1,66 @@
 # 07_joyeria
 
-Landing de joyería artesanal hecha con React + Vite.
+Landing de joyería artesanal hecha con React + Vite. Es una sola página con
+las secciones de hero, colecciones, pieza destacada, artesanía, testimonios y
+newsletter. Proyecto del curso de Cibertec.
+
+## Requisitos
+
+- Node.js 18 o superior
+- npm (viene con Node)
+
+## Instalación
+
+```bash
+git clone https://github.com/jadx2/07_joyeria.git
+cd 07_joyeria
+npm install
+```
+
+## Comandos
+
+```bash
+npm run dev
+```
+
+Levanta el servidor de desarrollo (Vite) en `http://localhost:5173`.
+
+```bash
+npm run build
+```
+
+Genera la versión de producción en `dist/`.
+
+```bash
+npm run preview
+```
+
+Sirve el `dist/` ya construido para revisarlo en local.
+
+```bash
+npm run lint
+```
+
+Pasa oxlint sobre el código.
+
+```bash
+npm run format
+```
+
+Formatea todo con Prettier.
+
+## Estructura
+
+```
+src/
+  main.jsx              punto de entrada, importa los estilos
+  App.jsx               arma las secciones de la página
+  components/           componentes reutilizables (Button, Tag, Container...)
+  sections/             cada sección de la landing
+  data/                 los datos de cada sección (slides, colecciones...)
+  assets/images/        las imágenes locales
+  styles/               reset.css, variables.css, global.css
+```
 
 ## Sistema de diseño
 
@@ -46,12 +106,11 @@ No hardcodear colores ni tamaños: si falta un valor, se agrega ahí primero.
 | `--container-pad` | `56px`       | Padding lateral                |
 | `--transition`    | `300ms ease` | Transición base de la interfaz |
 
-## Comandos
+## Cómo contribuir
 
-```bash
-npm run dev
-```
+Antes de escribir código, lee [CONTRIBUTING.md](CONTRIBUTING.md): convenciones
+de nombres, BEM, y el flujo de ramas y PRs.
 
-```bash
-npm run build
-```
+## Integrantes
+
+<!-- TODO: cada integrante se agrega aquí (nombre y usuario de GitHub) -->
