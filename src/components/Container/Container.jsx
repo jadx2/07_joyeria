@@ -1,6 +1,6 @@
-import './Container.css'
+import "./Container.css"
 
-function Container({ children, className = '' }) {
+function Container({ children, className = "" }) {
   return <div className={`contenedor ${className}`}>{children}</div>
 }
 
