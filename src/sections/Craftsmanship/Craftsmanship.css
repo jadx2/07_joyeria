@@ -32,7 +32,6 @@
   padding: var(--space-md);
   background-color: var(--color-bg-alt);
   border: 1px solid var(--color-border);
-  text-align: center;
 }
 
 .craftsmanship__insignia-numero {
