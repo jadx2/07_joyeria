@@ -1,4 +1,4 @@
-import { FaArrowRight } from "react-icons/fa"
+import { LuArrowRight } from "react-icons/lu"
 import "./Craftsmanship.css"
 import Container from "../../components/Container/Container"
 import SectionHeading from "../../components/SectionHeading/SectionHeading"
@@ -62,7 +62,7 @@ const Craftsmanship = () => {
             </div>
             <a href="#" className="craftsmanship__enlace">
               Our Manifesto
-              <FaArrowRight size={12} className="craftsmanship__enlace-icono" />
+              <LuArrowRight size={12} className="craftsmanship__enlace-icono" />
             </a>
           </div>
         </div>
