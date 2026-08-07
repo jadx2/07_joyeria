@@ -8,7 +8,8 @@ Guía de cómo trabajamos en el proyecto. Léela antes de tu primer PR.
 - CSS puro con variables nativas.
 - Sin librería de componentes: `<Button>`, `<Tag>`, `<Container>`, etc. se
   escriben a mano.
-- Única dependencia extra para UI: `lucide-react` (iconos).
+- Única dependencia extra para UI: `react-icons` (pack `lu`, los mismos
+  iconos de Lucide).
 - Sin router: es una sola página.
 
 ## Nombres

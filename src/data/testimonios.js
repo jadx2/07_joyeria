@@ -17,7 +17,7 @@ export const testimonios = [
     id: 3,
     nombre: "Elena Marchetti",
     rol: "Fashion Editor, Milan",
-    cita: "In a market saturated with noise, Aurore stands apart. Their restraint is their greatest luxury — nothing superfluous, everything intentional.",
+    cita: "In a market saturated with noise, Beautiful Princess stands apart. Their restraint is their greatest luxury — nothing superfluous, everything intentional.",
     estrellas: 5,
   },
 ]
