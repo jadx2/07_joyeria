@@ -40,7 +40,9 @@ const Footer = () => {
           ))}
         </div>
         <div className="footer__inferior">
-          <p className="footer__copyright">© 2026 Aurore. All rights reserved.</p>
+          <p className="footer__copyright">
+            © 2026 Aurore. All rights reserved.
+          </p>
           <ul className="footer__legales">
             {enlacesLegales.map((enlace) => (
               <li key={enlace}>
