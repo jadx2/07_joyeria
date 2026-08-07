@@ -16,8 +16,8 @@ const FeaturedPiece = () => {
           <p className="featured-piece__etiqueta">Featured Piece</p>
           <h2 className="featured-piece__titulo">Pomona Ring</h2>
           <p className="featured-piece__descripcion">
-            18k gold, ethically sourced Burmese ruby, hand-set by master
-            artisans in our Florence atelier.
+            18k gold, ethically sourced Peruvian gemstones, hand-set by
+            master artisans in our Lima atelier.
           </p>
           <p className="featured-piece__precio">$2,400</p>
           <div className="featured-piece__acciones">
