@@ -10,10 +10,10 @@ const Footer = () => {
       <Container>
         <div className="footer__columnas">
           <div className="footer__marca">
-            <p className="footer__marca-nombre">AURORE</p>
+            <p className="footer__marca-nombre">Beautiful Princess</p>
             <p className="footer__marca-descripcion">
               Handcrafted jewelry for those who value intention over excess.
-              Made in Florence since 1996.
+              Made in Perú since 2026.
             </p>
             <div className="footer__redes">
               <a href="#" aria-label="Instagram" className="footer__red">
@@ -41,7 +41,7 @@ const Footer = () => {
         </div>
         <div className="footer__inferior">
           <p className="footer__copyright">
-            © 2026 Aurore. All rights reserved.
+            © 2026 Beautiful Princess. All rights reserved.
           </p>
           <ul className="footer__legales">
             {enlacesLegales.map((enlace) => (
