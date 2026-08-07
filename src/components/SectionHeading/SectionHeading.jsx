@@ -1,6 +1,6 @@
-import './SectionHeading.css'
+import "./SectionHeading.css"
 
-function SectionHeading({ eyebrow, children, align = 'left' }) {
+function SectionHeading({ eyebrow, children, align = "left" }) {
   return (
     <div className={`encabezado encabezado--${align}`}>
       <p className="encabezado__etiqueta">{eyebrow}</p>
