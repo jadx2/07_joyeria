@@ -3,6 +3,13 @@
   height: 78vh;
   min-height: 520px;
   overflow: hidden;
+  background-color: var(--color-text);
+}
+
+.hero__diapositiva {
+  position: absolute;
+  inset: 0;
+  transition: opacity 1000ms ease;
 }
 
 .hero__fondo {
@@ -28,7 +35,7 @@
   right: 0;
   bottom: 0;
   padding-bottom: 96px;
-  padding-left: var(--container-pad);
+  padding-left: 96px;
   max-width: 512px;
   z-index: 10;
 }
@@ -57,4 +64,69 @@
 
 .hero__accion {
   margin-top: var(--space-md);
+}
+
+.hero__flecha {
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  background-color: transparent;
+  color: var(--color-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  transition: background-color var(--transition);
+}
+
+.hero__flecha--izquierda {
+  left: 32px;
+}
+
+.hero__flecha--derecha {
+  right: 32px;
+}
+
+.hero__flecha:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.hero__puntos {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 10;
+}
+
+.hero__punto {
+  width: 12px;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  position: relative;
+  transition:
+    width var(--transition),
+    background-color var(--transition);
+}
+
+.hero__punto::after {
+  content: "";
+  position: absolute;
+  inset: -10px 0;
+}
+
+.hero__punto--activo {
+  width: 40px;
+  background-color: var(--color-accent);
 }
