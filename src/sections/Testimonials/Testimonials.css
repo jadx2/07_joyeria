@@ -1,3 +1,45 @@
-.testimonials {
-  padding: var(--space-2xl) var(--container-pad);
+.testimonios {
+  background-color: var(--color-bg-alt);
+  padding: 112px 0;
+}
+
+.testimonios__contenedor {
+  max-width: 768px;
+  margin: 0 auto;
+  padding: 0 var(--container-pad);
+  text-align: center;
+}
+
+.testimonios__contenedor .encabezado__titulo {
+  font-size: 40px;
+}
+
+.testimonios__estrellas {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  margin-top: var(--space-lg);
+}
+
+.testimonios__cita {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 24px;
+  line-height: 1.6;
+  color: var(--color-text);
+  margin-top: var(--space-md);
+}
+
+.testimonios__nombre {
+  font-family: var(--font-body);
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  color: var(--color-text);
+  margin-top: var(--space-md);
+}
+
+.testimonios__rol {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  margin-top: 4px;
 }
