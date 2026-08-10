@@ -67,7 +67,7 @@
 .testimonios__punto {
   width: 12px;
   height: 1px;
-  background-color: rgba(184, 151, 106, 0.35);
+  background-color: var(--color-primary-muted);
   border: none;
   padding: 0;
   cursor: pointer;
