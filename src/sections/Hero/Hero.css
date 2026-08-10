@@ -1,3 +1,60 @@
 .hero {
-  padding: var(--space-2xl) var(--container-pad);
+  position: relative;
+  height: 78vh;
+  min-height: 520px;
+  overflow: hidden;
+}
+
+.hero__fondo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero__velo {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(28, 26, 22, 0.72) 0%,
+    rgba(28, 26, 22, 0.15) 55%,
+    transparent 100%
+  );
+}
+
+.hero__contenido {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding-bottom: 6rem;
+  padding-left: var(--container-pad);
+  max-width: 512px;
+  z-index: 10;
+}
+
+.hero__etiqueta {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.35em;
+  color: var(--color-accent);
+}
+
+.hero__titulo {
+  font-family: var(--font-display);
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  line-height: 1;
+  color: var(--color-light);
+  white-space: pre-line;
+  margin-top: var(--space-sm);
+}
+
+.hero__descripcion {
+  font-size: 14px;
+  color: rgba(250, 247, 242, 0.75);
+  margin-top: var(--space-sm);
+}
+
+.hero__accion {
+  margin-top: var(--space-md);
 }
