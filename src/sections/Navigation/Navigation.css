@@ -11,6 +11,15 @@
   padding: 0 var(--container-pad);
   background: transparent;
   color: var(--color-light);
+  transition: background-color 500ms ease, border-color 500ms ease,
+    color 500ms ease;
+}
+
+.navigation--con-scroll {
+  background: rgba(250, 247, 242, 0.96);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text);
 }
 
 .navigation__logo {
@@ -28,13 +37,29 @@
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: var(--color-light);
+  color: rgba(250, 247, 242, 0.75);
   text-decoration: none;
   transition: var(--transition);
 }
 
 .navigation__link:hover {
   color: var(--color-accent);
+}
+
+.navigation--con-scroll .navigation__link {
+  color: var(--color-text-muted);
+}
+
+.navigation .boton--outline {
+  border-color: rgba(250, 247, 242, 0.5);
+}
+
+.navigation--con-scroll .boton--outline {
+  border-color: var(--color-primary);
+}
+
+.navigation--con-scroll .navigation__hamburguesa {
+  color: var(--color-text);
 }
 
 /* Hamburguesa: oculta en escritorio */
