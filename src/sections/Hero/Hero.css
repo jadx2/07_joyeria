@@ -27,7 +27,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  padding-bottom: 6rem;
+  padding-bottom: 96px;
   padding-left: var(--container-pad);
   max-width: 512px;
   z-index: 10;
