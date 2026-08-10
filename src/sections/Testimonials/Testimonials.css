@@ -1,6 +1,6 @@
 .testimonios {
   background-color: var(--color-bg-alt);
-  padding: 7rem 0;
+  padding: 112px 0;
 }
 
 .testimonios__contenedor {
@@ -11,7 +11,7 @@
 }
 
 .testimonios__contenedor .encabezado__titulo {
-  font-size: 2.5rem;
+  font-size: 40px;
 }
 
 .testimonios__estrellas {
@@ -24,7 +24,7 @@
 .testimonios__cita {
   font-family: var(--font-display);
   font-style: italic;
-  font-size: 1.5rem;
+  font-size: 24px;
   line-height: 1.6;
   color: var(--color-text);
   margin-top: var(--space-md);
