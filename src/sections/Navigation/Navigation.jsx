@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { LuMenu, LuX } from "react-icons/lu"
+import Button from "../../components/Button/Button"
 import "./Navigation.css"
 
 const enlaces = ["Collections", "Craftsmanship", "About", "Journal"]
@@ -9,7 +10,7 @@ const Navigation = () => {
 
   return (
     <header className="navigation">
-      <span className="navigation__logo">AURORE</span>
+      <span className="navigation__logo">BEAUTIFUL PRINCESS</span>
 
       <nav className="navigation__enlaces">
         {enlaces.map((enlace) => (
@@ -23,7 +24,9 @@ const Navigation = () => {
         ))}
       </nav>
 
-      <button className="navigation__btn">Shop Now</button>
+      <div className="navigation__accion">
+        <Button variant="outline">Shop Now</Button>
+      </div>
 
       <button
         className="navigation__hamburguesa"

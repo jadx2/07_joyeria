@@ -37,28 +37,12 @@
   color: var(--color-accent);
 }
 
-.navigation__btn {
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--color-light);
-  background: transparent;
-  border: 1px solid var(--color-light);
-  padding: 10px 24px;
-  cursor: pointer;
-  transition: var(--transition);
-}
-
-.navigation__btn:hover {
-  background: var(--color-light);
-  color: var(--color-text);
-}
-
 /* Hamburguesa: oculta en escritorio */
 .navigation__hamburguesa {
   display: none;
   background: transparent;
   border: none;
+  padding: 0;
   color: var(--color-light);
   cursor: pointer;
 }
@@ -92,11 +76,15 @@
 
 /* Media query: móvil */
 @media (max-width: 768px) {
+  .navigation {
+    padding: 0 24px;
+  }
+
   .navigation__enlaces {
     display: none;
   }
 
-  .navigation__btn {
+  .navigation__accion {
     display: none;
   }
 
