@@ -8,6 +8,9 @@
   --color-accent: #c9a96e;
   --color-light: #faf7f2;
   --color-border: rgba(184, 151, 106, 0.25);
+  --color-bg-translucido: rgba(250, 247, 242, 0.96);
+  --color-blanco-suave: rgba(255, 255, 255, 0.75);
+  --color-blanco-tenue: rgba(255, 255, 255, 0.5);
 
   /* ── Tipografías ── */
   --font-display: "Playfair Display", Georgia, serif;
