@@ -100,11 +100,11 @@ No hardcodear colores ni tamaños: si falta un valor, se agrega ahí primero.
 
 ### Layout y otros
 
-| Variable          | Valor        | Uso                            |
-| ----------------- | ------------ | ------------------------------ |
-| `--container-max` | `1023px`     | Ancho máximo del contenido     |
-| `--container-pad` | `56px`       | Padding lateral                |
-| `--transition`    | `300ms ease` | Transición base de la interfaz |
+| Variable          | Valor        | Uso                                                 |
+| ----------------- | ------------ | --------------------------------------------------- |
+| `--container-max` | `1135px`     | Ancho total (1023 de contenido + 2 × 56 de padding) |
+| `--container-pad` | `56px`       | Padding lateral                                     |
+| `--transition`    | `300ms ease` | Transición base de la interfaz                      |
 
 ## Cómo contribuir
 
