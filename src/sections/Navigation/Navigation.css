@@ -1,3 +1,38 @@
 .navigation {
-  padding: var(--space-md) var(--container-pad);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--container-pad);
+  background: transparent;
+  color: var(--color-light);
+}
+
+.navigation__logo {
+  font-family: var(--font-display);
+  font-size: 32px;
+  letter-spacing: 0.2em;
+}
+
+.navigation__enlaces {
+  display: flex;
+  gap: 40px;
+}
+
+.navigation__link {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-light);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.navigation__link:hover {
+  color: var(--color-accent);
 }
