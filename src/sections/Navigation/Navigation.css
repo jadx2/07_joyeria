@@ -36,3 +36,59 @@
 .navigation__link:hover {
   color: var(--color-accent);
 }
+
+/* Hamburguesa: oculta en escritorio */
+.navigation__hamburguesa {
+  display: none;
+  background: transparent;
+  border: none;
+  padding: 0;
+  color: var(--color-light);
+  cursor: pointer;
+}
+
+/* Panel móvil */
+.navigation__panel-movil {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  right: 0;
+  background: var(--color-bg);
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 32px 24px;
+}
+
+.navigation__link-movil {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-text);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.navigation__link-movil:hover {
+  color: var(--color-primary);
+}
+
+/* Media query: móvil */
+@media (max-width: 768px) {
+  .navigation {
+    padding: 0 24px;
+  }
+
+  .navigation__enlaces {
+    display: none;
+  }
+
+  .navigation__accion {
+    display: none;
+  }
+
+  .navigation__hamburguesa {
+    display: block;
+  }
+}
