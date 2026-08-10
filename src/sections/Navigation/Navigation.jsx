@@ -1,7 +1,57 @@
+import { useState } from "react"
+import { LuMenu, LuX } from "react-icons/lu"
 import "./Navigation.css"
 
+const enlaces = ["Collections", "Craftsmanship", "About", "Journal"]
+
 const Navigation = () => {
-  return <nav className="navigation">Navigation — pendiente</nav>
+  const [menuAbierto, setMenuAbierto] = useState(false)
+
+  return (
+    <header className="navigation">
+      <span className="navigation__logo">AURORE</span>
+
+      <nav className="navigation__enlaces">
+        {enlaces.map((enlace) => (
+          <a
+            key={enlace}
+            href={`#${enlace.toLowerCase()}`}
+            className="navigation__link"
+          >
+            {enlace}
+          </a>
+        ))}
+      </nav>
+
+      <button className="navigation__btn">Shop Now</button>
+
+      <button
+        className="navigation__hamburguesa"
+        onClick={() => setMenuAbierto(!menuAbierto)}
+        aria-label={menuAbierto ? "Cerrar menú" : "Abrir menú"}
+        aria-expanded={menuAbierto}
+      >
+        {menuAbierto ? <LuX size={20} /> : <LuMenu size={20} />}
+      </button>
+
+      {menuAbierto && (
+        <div className="navigation__panel-movil">
+          {enlaces.map((enlace) => (
+            <a
+              key={enlace}
+              href={`#${enlace.toLowerCase()}`}
+              className="navigation__link-movil"
+            >
+              {enlace}
+            </a>
+          ))}
+          <a href="#shop" className="navigation__link-movil">
+            Shop Now
+          </a>
+        </div>
+      )}
+    </header>
+  )
 }
 
 export default Navigation
