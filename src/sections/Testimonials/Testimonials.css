@@ -14,11 +14,23 @@
   font-size: 40px;
 }
 
+.testimonios__lista {
+  position: relative;
+  min-height: 200px;
+  margin-top: var(--space-lg);
+}
+
+.testimonios__item {
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: opacity var(--transition);
+}
+
 .testimonios__estrellas {
   display: flex;
   justify-content: center;
   gap: 4px;
-  margin-top: var(--space-lg);
 }
 
 .testimonios__cita {
@@ -42,4 +54,36 @@
   font-size: 12px;
   color: var(--color-text-muted);
   margin-top: 4px;
+}
+
+.testimonios__puntos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: var(--space-lg);
+}
+
+.testimonios__punto {
+  width: 12px;
+  height: 1px;
+  background-color: var(--color-primary-muted);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  position: relative;
+  transition:
+    width var(--transition),
+    background-color var(--transition);
+}
+
+.testimonios__punto::after {
+  content: "";
+  position: absolute;
+  inset: -10px 0;
+}
+
+.testimonios__punto--activo {
+  width: 32px;
+  background-color: var(--color-primary);
 }
