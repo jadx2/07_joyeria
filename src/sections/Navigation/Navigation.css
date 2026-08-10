@@ -11,12 +11,24 @@
   padding: 0 var(--container-pad);
   background: transparent;
   color: var(--color-light);
+  transition:
+    background-color 500ms ease,
+    border-color 500ms ease,
+    color 500ms ease;
+}
+
+.navigation--con-scroll {
+  background: var(--color-bg-translucido);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text);
 }
 
 .navigation__logo {
   font-family: var(--font-display);
   font-size: 32px;
   letter-spacing: 0.2em;
+  transition: color 500ms ease;
 }
 
 .navigation__enlaces {
@@ -28,13 +40,40 @@
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: var(--color-light);
+  color: var(--color-blanco-suave);
   text-decoration: none;
-  transition: var(--transition);
+  transition: color 500ms ease;
 }
 
 .navigation__link:hover {
   color: var(--color-accent);
+}
+
+.navigation--con-scroll .navigation__link {
+  color: var(--color-text-muted);
+}
+
+.navigation--con-scroll .navigation__link:hover {
+  color: var(--color-primary);
+}
+
+.navigation .boton--outline {
+  border-color: var(--color-blanco-tenue);
+  transition:
+    border-color 500ms ease,
+    color 500ms ease;
+}
+
+.navigation .boton--outline:hover {
+  border-color: var(--color-accent);
+}
+
+.navigation--con-scroll .boton--outline {
+  border-color: var(--color-primary);
+}
+
+.navigation--con-scroll .boton--outline:hover {
+  border-color: var(--color-accent);
 }
 
 /* Hamburguesa: oculta en escritorio */
