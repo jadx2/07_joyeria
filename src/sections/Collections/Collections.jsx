@@ -28,7 +28,10 @@ const Collections = () => {
               key={coleccion.id}
               style={{ marginTop: desplazamientos[indice] }}
             >
-              <CollectionCard {...coleccion} />
+              <CollectionCard
+                {...coleccion}
+                enlace={`/collections/${coleccion.id}`}
+              />
             </div>
           ))}
         </div>
