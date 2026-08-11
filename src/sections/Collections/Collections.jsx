@@ -9,7 +9,7 @@ const desplazamientos = ["0", "48px", "0", "24px"]
 
 const Collections = () => {
   return (
-    <section className="collections">
+    <section className="collections" id="collections">
       <Container>
         <div className="collections__encabezado">
           <SectionHeading eyebrow="Our Collections">

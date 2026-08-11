@@ -7,7 +7,7 @@ import { estadisticas } from "../../data/estadisticas"
 
 const Craftsmanship = () => {
   return (
-    <section className="craftsmanship">
+    <section className="craftsmanship" id="craftsmanship">
       <Container>
         <div className="craftsmanship__grid">
           <div className="craftsmanship__columna-imagen">
