@@ -1,0 +1,20 @@
+.no-encontrado {
+  padding-top: var(--space-2xl);
+  padding-bottom: var(--space-2xl);
+  text-align: center;
+}
+
+.no-encontrado__codigo {
+  color: var(--color-text);
+  font-family: var(--font-display);
+  font-size: 96px;
+  line-height: 1;
+}
+
+.no-encontrado__texto {
+  color: var(--color-text-muted);
+  font-family: var(--font-body);
+  font-size: 14px;
+  margin-top: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
