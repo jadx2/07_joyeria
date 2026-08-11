@@ -1,28 +1,29 @@
-import Navigation from "./sections/Navigation/Navigation"
-import Hero from "./sections/Hero/Hero"
-import Marquee from "./sections/Marquee/Marquee"
-import Collections from "./sections/Collections/Collections"
-import FeaturedPiece from "./sections/FeaturedPiece/FeaturedPiece"
-import Craftsmanship from "./sections/Craftsmanship/Craftsmanship"
-import Testimonials from "./sections/Testimonials/Testimonials"
-import Newsletter from "./sections/Newsletter/Newsletter"
-import Footer from "./sections/Footer/Footer"
+import { Route, Routes } from "react-router-dom"
+import RootLayout from "./layouts/RootLayout"
+import Home from "./pages/Home"
+import CollectionDetail from "./pages/CollectionDetail"
+import Cart from "./pages/Cart"
+import Checkout from "./pages/Checkout"
+import OrderConfirmation from "./pages/OrderConfirmation"
+import CheckoutCancelled from "./pages/CheckoutCancelled"
+import NotFound from "./pages/NotFound"
 
 const App = () => {
   return (
-    <>
-      <Navigation />
-      <main>
-        <Hero />
-        <Marquee />
-        <Collections />
-        <FeaturedPiece />
-        <Craftsmanship />
-        <Testimonials />
-        <Newsletter />
-      </main>
-      <Footer />
-    </>
+    <Routes>
+      <Route element={<RootLayout />}>
+        <Route path="/" element={<Home />} />
+        <Route
+          path="/collections/:coleccionId"
+          element={<CollectionDetail />}
+        />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/checkout" element={<Checkout />} />
+        <Route path="/order/confirmado" element={<OrderConfirmation />} />
+        <Route path="/checkout/cancelado" element={<CheckoutCancelled />} />
+        <Route path="*" element={<NotFound />} />
+      </Route>
+    </Routes>
   )
 }
 
