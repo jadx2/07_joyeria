@@ -39,6 +39,10 @@
   transform: translateY(0);
 }
 
+.tarjeta__enlace {
+  display: inline-block;
+}
+
 .tarjeta__titulo {
   font-family: var(--font-display);
   font-size: 20px;
