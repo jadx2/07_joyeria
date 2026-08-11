@@ -10,7 +10,9 @@ Guía de cómo trabajamos en el proyecto. Léela antes de tu primer PR.
   escriben a mano.
 - Única dependencia extra para UI: `react-icons` (pack `lu`, los mismos
   iconos de Lucide).
-- Sin router: es una sola página.
+- Rutas con `react-router-dom`: `App.jsx` declara las rutas y
+  `layouts/RootLayout.jsx` pone la navegación y el footer que se repiten en
+  todas las páginas. Cada página vive en `src/pages/`.
 
 ## Nombres
 

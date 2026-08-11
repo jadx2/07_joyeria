@@ -1,8 +1,9 @@
 # 07_joyeria
 
-Landing de joyería artesanal hecha con React + Vite. Es una sola página con
-las secciones de hero, colecciones, pieza destacada, artesanía, testimonios y
-newsletter. Proyecto del curso de Cibertec.
+Landing de joyería artesanal hecha con React + Vite. La home tiene las
+secciones de hero, colecciones, pieza destacada, artesanía, testimonios y
+newsletter, y la tienda vive en sus propias rutas. Proyecto del curso de
+Cibertec.
 
 ## Requisitos
 
@@ -54,7 +55,9 @@ Formatea todo con Prettier.
 ```
 src/
   main.jsx              punto de entrada, importa los estilos
-  App.jsx               arma las secciones de la página
+  App.jsx               declara las rutas
+  layouts/RootLayout    navegación y footer comunes a todas las páginas
+  pages/                una página por ruta (Home, Cart, Checkout...)
   components/           componentes reutilizables (Button, Tag, Container...)
   sections/             cada sección de la landing
   data/                 los datos de cada sección (slides, colecciones...)
