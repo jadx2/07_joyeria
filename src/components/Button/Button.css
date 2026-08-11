@@ -16,8 +16,13 @@
   color: var(--color-light);
 }
 
-.boton--primary:hover {
+.boton--primary:not(:disabled):hover {
   background: var(--color-accent);
+}
+
+.boton:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
 }
 
 .boton--light {
