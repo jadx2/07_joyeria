@@ -50,6 +50,73 @@ npm run format
 
 Formatea todo con Prettier.
 
+## Pagos con Stripe (modo prueba)
+
+El checkout crea una sesión de pago en una función serverless
+(`api/crear-sesion-pago.js`) y redirige a la página de pago que hospeda Stripe.
+Todo corre en **modo prueba**: la mecánica es real, el dinero es de mentira.
+
+### Para maquetar: `npm run dev`
+
+Para trabajar la UI, con Vite basta (`npm run dev`). Pero Vite **no ejecuta la
+carpeta `api/`**, así que el botón _Pay with Card_ responde 404. Para probar el
+pago de punta a punta necesitas la CLI de Vercel, que sirve el sitio y las
+funciones juntas.
+
+### Para probar el pago: `vercel dev`
+
+1. Consigue una clave de prueba de Stripe: crea una cuenta en
+   `dashboard.stripe.com`, deja **Test mode** encendido y en
+   _Developers → API keys_ copia la **Secret key** (`sk_test_…`). La
+   _Publishable key_ no se usa.
+
+2. Instala la CLI de Vercel e inicia sesión (una sola vez):
+
+   ```bash
+   npm i -g vercel
+   vercel login
+   ```
+
+3. Enlaza el proyecto. Elige tu **cuenta personal** (plan Hobby, gratis) como
+   scope, no un team:
+
+   ```bash
+   vercel link
+   ```
+
+4. Guarda la clave en el proyecto, en el entorno Development. Es de ahí de donde
+   `vercel dev` la lee: una `STRIPE_SECRET_KEY` puesta a mano en `.env.local`
+   **no** le llega a la función.
+
+   ```bash
+   vercel env add STRIPE_SECRET_KEY development
+   ```
+
+   Pega el `sk_test_…` cuando lo pida.
+
+5. Levanta todo:
+
+   ```bash
+   vercel dev
+   ```
+
+   Abre la URL que te dé (normalmente `http://localhost:3000`), agrega una pieza
+   al carrito, ve a _Checkout_ y paga con la tarjeta `4242 4242 4242 4242`,
+   cualquier fecha futura y cualquier CVC.
+
+### Notas
+
+- `.env.local` está en `.gitignore` y no se sube nunca; lo gestiona la CLI
+  (`vercel env pull` lo regenera desde el proyecto). La clave **no** lleva el
+  prefijo `VITE_`, o Vite la publicaría en el bundle del navegador.
+- Para el despliegue, agrega la misma clave al entorno Production:
+  `vercel env add STRIPE_SECRET_KEY production`, o desde _Settings → Environment
+  Variables_ en el dashboard.
+- Otras tarjetas de prueba: `4000 0000 0000 0002` rechaza ·
+  `4000 0025 0000 3155` pide 3D Secure.
+- Si al pagar sale el error de Stripe "Neither apiKey … provided", falta la
+  clave en el proyecto: repite el paso 4 y reinicia `vercel dev`.
+
 ## Estructura
 
 ```

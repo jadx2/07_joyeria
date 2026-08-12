@@ -27,12 +27,32 @@ const Checkout = () => {
     return nuevos
   }
 
-  function manejarEnvio(evento) {
+  async function manejarEnvio(evento) {
     evento.preventDefault()
     const nuevos = validar()
     setErrores(nuevos)
-    if (Object.keys(nuevos).length === 0) {
-      setEnviando(true)
+    if (Object.keys(nuevos).length > 0) {
+      return
+    }
+    setEnviando(true)
+    const items = lineas.map(({ producto, cantidad }) => ({
+      productoId: producto.id,
+      cantidad,
+    }))
+    try {
+      const respuesta = await fetch("/api/crear-sesion-pago", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ items, correo }),
+      })
+      if (!respuesta.ok) {
+        throw new Error("payment session failed")
+      }
+      const { url } = await respuesta.json()
+      window.location = url
+    } catch {
+      setEnviando(false)
+      setErrores({ envio: "Something went wrong. Please try again." })
     }
   }
 
@@ -92,6 +112,11 @@ const Checkout = () => {
                 </p>
               )}
             </div>
+            {errores.envio && (
+              <p className="campo__error" id="envio-error">
+                {errores.envio}
+              </p>
+            )}
             <Button
               variant="primary"
               className="pago__enviar"
