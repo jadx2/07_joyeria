@@ -56,26 +56,28 @@ const Cart = () => {
                     Remove
                   </button>
                 </div>
-                <div className="linea__stepper">
-                  <button
-                    className="linea__paso"
-                    onClick={() => cambiarCantidad(producto.id, cantidad - 1)}
-                    aria-label="Decrease quantity"
-                  >
-                    −
-                  </button>
-                  <span className="linea__cantidad">{cantidad}</span>
-                  <button
-                    className="linea__paso"
-                    onClick={() => cambiarCantidad(producto.id, cantidad + 1)}
-                    aria-label="Increase quantity"
-                  >
-                    +
-                  </button>
+                <div className="linea__acciones">
+                  <div className="linea__stepper">
+                    <button
+                      className="linea__paso"
+                      onClick={() => cambiarCantidad(producto.id, cantidad - 1)}
+                      aria-label="Decrease quantity"
+                    >
+                      −
+                    </button>
+                    <span className="linea__cantidad">{cantidad}</span>
+                    <button
+                      className="linea__paso"
+                      onClick={() => cambiarCantidad(producto.id, cantidad + 1)}
+                      aria-label="Increase quantity"
+                    >
+                      +
+                    </button>
+                  </div>
+                  <p className="linea__total">
+                    {formatearPrecio(producto.precio * cantidad)}
+                  </p>
                 </div>
-                <p className="linea__total">
-                  {formatearPrecio(producto.precio * cantidad)}
-                </p>
               </li>
             ))}
           </ul>

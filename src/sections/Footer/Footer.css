@@ -101,3 +101,25 @@
 .footer__enlace-legal:hover {
   color: var(--color-text);
 }
+
+@media (max-width: 1023px) {
+  .footer__columnas {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .footer__marca {
+    grid-column: span 3;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer__columnas {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  .footer__marca-nombre {
+    font-size: 18px;
+    letter-spacing: 3px;
+  }
+}

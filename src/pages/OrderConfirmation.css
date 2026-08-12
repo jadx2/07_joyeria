@@ -119,6 +119,11 @@
 }
 
 @media (max-width: 767px) {
+  .confirmacion {
+    padding-top: var(--space-lg);
+    padding-bottom: var(--space-xl);
+  }
+
   .confirmacion__titulo {
     font-size: 40px;
   }
