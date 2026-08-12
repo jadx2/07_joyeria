@@ -21,9 +21,11 @@ const OrderConfirmation = () => {
     let activo = true
     async function verificar() {
       try {
-        const respuesta = await fetch(
-          `/api/verificar-sesion?session_id=${encodeURIComponent(sessionId)}`,
-        )
+        const respuesta = await fetch("/api/confirmar-orden", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ sessionId }),
+        })
         if (!respuesta.ok) {
           throw new Error("verification failed")
         }
