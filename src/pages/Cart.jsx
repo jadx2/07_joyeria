@@ -60,9 +60,7 @@ const Cart = () => {
                   <div className="linea__stepper">
                     <button
                       className="linea__paso"
-                      onClick={() =>
-                        cambiarCantidad(producto.id, cantidad - 1)
-                      }
+                      onClick={() => cambiarCantidad(producto.id, cantidad - 1)}
                       aria-label="Decrease quantity"
                     >
                       −
@@ -70,9 +68,7 @@ const Cart = () => {
                     <span className="linea__cantidad">{cantidad}</span>
                     <button
                       className="linea__paso"
-                      onClick={() =>
-                        cambiarCantidad(producto.id, cantidad + 1)
-                      }
+                      onClick={() => cambiarCantidad(producto.id, cantidad + 1)}
                       aria-label="Increase quantity"
                     >
                       +
