@@ -80,6 +80,10 @@
   color: var(--color-primary);
 }
 
+.linea__acciones {
+  display: contents;
+}
+
 .linea__stepper {
   display: flex;
   flex-shrink: 0;
@@ -100,6 +104,7 @@
 }
 
 .linea__paso {
+  position: relative;
   background: none;
   cursor: pointer;
   transition: background var(--transition);
@@ -216,7 +221,17 @@
     flex-wrap: wrap;
   }
 
-  .linea__total {
-    margin-left: auto;
+  .linea__acciones {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 116px;
+  }
+
+  .linea__paso::after {
+    content: "";
+    position: absolute;
+    inset: -6px;
   }
 }

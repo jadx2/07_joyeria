@@ -33,3 +33,9 @@
   /* ── Otros ── */
   --transition: 300ms ease;
 }
+
+@media (max-width: 767px) {
+  :root {
+    --container-pad: 24px;
+  }
+}

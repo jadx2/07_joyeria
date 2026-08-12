@@ -18,3 +18,14 @@
   margin-top: var(--space-md);
   margin-bottom: var(--space-lg);
 }
+
+@media (max-width: 767px) {
+  .no-encontrado {
+    padding-top: var(--space-xl);
+    padding-bottom: var(--space-xl);
+  }
+
+  .no-encontrado__codigo {
+    font-size: 64px;
+  }
+}
