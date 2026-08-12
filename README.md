@@ -117,6 +117,37 @@ funciones juntas.
 - Si al pagar sale el error de Stripe "Neither apiKey … provided", falta la
   clave en el proyecto: repite el paso 4 y reinicia `vercel dev`.
 
+## Correo de confirmación
+
+Cuando el pago sale bien, la página de confirmación llama a la función
+`api/confirmar-orden.js`, que le pregunta a Stripe si esa sesión está pagada y,
+si lo está, envía el correo del pedido. El correo sale por SMTP desde una cuenta
+de Gmail (SPF y DKIM ya en regla), así que llega a cualquier dirección sin
+necesitar un dominio verificado.
+
+Hace falta una contraseña de aplicación de Gmail (no la contraseña normal):
+
+1. Activa la verificación en dos pasos en la cuenta que vaya a enviar.
+2. Genera una contraseña de aplicación en
+   [myaccount.google.com/apppasswords](https://myaccount.google.com/apppasswords).
+3. Guárdala en el proyecto junto con el correo de la cuenta:
+
+   ```bash
+   vercel env add GMAIL_USER development
+   vercel env add GMAIL_APP_PASSWORD development
+   ```
+
+   Igual que la clave de Stripe, estas variables las lee `vercel dev` desde el
+   proyecto; ponerlas a mano en `.env.local` no le llega a la función. Para el
+   despliegue, repite los dos `vercel env add` con `production`.
+
+### No hay webhooks (a propósito)
+
+El correo se dispara cuando el cliente vuelve a la página de confirmación. Si
+paga y cierra la pestaña antes de volver, el correo no sale. Para un proyecto de
+curso es aceptable; en producción se escucharía el evento
+`checkout.session.completed` de Stripe para enviarlo siempre.
+
 ## Estructura
 
 ```
