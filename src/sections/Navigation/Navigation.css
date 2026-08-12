@@ -149,6 +149,11 @@
     padding: 0 24px;
   }
 
+  .navigation__logo {
+    font-size: 18px;
+    letter-spacing: 0.12em;
+  }
+
   .navigation__enlaces {
     display: none;
   }
