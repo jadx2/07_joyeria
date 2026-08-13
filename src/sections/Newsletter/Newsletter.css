@@ -55,6 +55,7 @@
 @media (max-width: 767px) {
   .newsletter__formulario {
     flex-direction: column;
+    gap: 20px;
   }
 
   .newsletter__input {
