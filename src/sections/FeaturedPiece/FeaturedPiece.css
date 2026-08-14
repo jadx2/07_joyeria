@@ -97,5 +97,6 @@
 
   .featured-piece__acciones .boton {
     width: 100%;
+    min-height: 44px;
   }
 }
