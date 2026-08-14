@@ -130,3 +130,29 @@
   width: 40px;
   background-color: var(--color-accent);
 }
+
+/* Media query: móvil */
+@media (max-width: 767px) {
+  .hero {
+    height: 70vh;
+    min-height: 480px;
+  }
+
+  .hero__contenido {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .hero__flecha {
+    display: none;
+  }
+
+  .hero__puntos {
+    bottom: 32px;
+  }
+
+  /* Área táctil de ~44px para tocar con el dedo */
+  .hero__punto::after {
+    inset: -20px -16px;
+  }
+}
