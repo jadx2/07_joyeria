@@ -114,12 +114,23 @@
 
 @media (max-width: 767px) {
   .footer__columnas {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--space-lg);
+  }
+
+  .footer__marca {
+    grid-column: span 2;
   }
 
   .footer__marca-nombre {
     font-size: 18px;
     letter-spacing: 3px;
+  }
+
+  .footer__inferior {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: var(--space-sm);
   }
 }

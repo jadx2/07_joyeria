@@ -87,3 +87,13 @@
   width: 32px;
   background-color: var(--color-primary);
 }
+
+@media (max-width: 767px) {
+  .testimonios__cita {
+    font-size: 18px;
+  }
+
+  .testimonios__lista {
+    min-height: 280px;
+  }
+}

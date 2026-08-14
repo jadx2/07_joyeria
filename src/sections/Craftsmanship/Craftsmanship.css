@@ -104,3 +104,25 @@
 .craftsmanship__enlace:hover .craftsmanship__enlace-icono {
   transform: translateX(4px);
 }
+
+@media (max-width: 1023px) {
+  .craftsmanship__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  .craftsmanship__insignia {
+    bottom: 16px;
+    right: 16px;
+  }
+}
+
+@media (max-width: 767px) {
+  .craftsmanship__insignia-numero {
+    font-size: 32px;
+  }
+
+  .craftsmanship__estadistica-numero {
+    font-size: 24px;
+  }
+}
