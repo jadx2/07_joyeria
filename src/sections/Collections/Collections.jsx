@@ -5,7 +5,12 @@ import SectionHeading from "../../components/SectionHeading/SectionHeading"
 import CollectionCard from "../../components/CollectionCard/CollectionCard"
 import { colecciones } from "../../data/colecciones"
 
-const desplazamientos = ["0", "48px", "0", "24px"]
+const desplazamientos = [
+  "",
+  "collections__item--desplazado-grande",
+  "",
+  "collections__item--desplazado-pequeno",
+]
 
 const Collections = () => {
   return (
@@ -26,7 +31,7 @@ const Collections = () => {
           {colecciones.map((coleccion, indice) => (
             <div
               key={coleccion.id}
-              style={{ marginTop: desplazamientos[indice] }}
+              className={`collections__item ${desplazamientos[indice]}`}
             >
               <CollectionCard
                 {...coleccion}
