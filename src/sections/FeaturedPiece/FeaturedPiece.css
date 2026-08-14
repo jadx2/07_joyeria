@@ -66,3 +66,36 @@
   gap: 12px;
   margin-top: var(--space-md);
 }
+
+@media (max-width: 767px) {
+  .featured-piece {
+    height: 70vh;
+  }
+
+  .featured-piece__velo {
+    background: linear-gradient(
+      to top,
+      rgba(28, 26, 22, 0.75) 0%,
+      rgba(28, 26, 22, 0.3) 55%,
+      transparent 100%
+    );
+  }
+
+  .featured-piece__contenido {
+    align-items: flex-end;
+    padding-right: var(--container-pad);
+    padding-bottom: 48px;
+  }
+
+  .featured-piece__titulo {
+    font-size: 40px;
+  }
+
+  .featured-piece__acciones {
+    flex-direction: column;
+  }
+
+  .featured-piece__acciones .boton {
+    width: 100%;
+  }
+}
