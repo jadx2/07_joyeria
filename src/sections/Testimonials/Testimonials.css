@@ -83,6 +83,10 @@
   inset: -10px 0;
 }
 
+.testimonios__punto:hover {
+  background-color: var(--color-primary);
+}
+
 .testimonios__punto--activo {
   width: 32px;
   background-color: var(--color-primary);

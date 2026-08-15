@@ -17,6 +17,7 @@
   letter-spacing: 0.12em;
   color: var(--color-text-muted);
   text-decoration: none;
+  cursor: pointer;
   transition: color var(--transition);
 }
 
