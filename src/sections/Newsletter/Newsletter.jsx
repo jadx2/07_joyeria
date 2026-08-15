@@ -24,17 +24,20 @@ const Newsletter = () => {
         events, and the stories behind each piece.
       </p>
       {suscrito ? (
-        <div className="newsletter__exito">
+        <div className="newsletter__exito" aria-live="polite">
           <p>Thank you for joining us.</p>
         </div>
       ) : (
         <form className="newsletter__formulario" onSubmit={manejarEnvio}>
+          <label htmlFor="correo" className="visualmente-oculto">
+            Email address
+          </label>
           <input
+            id="correo"
             type="email"
             value={correo}
             onChange={(evento) => setCorreo(evento.target.value)}
             placeholder="Your email address"
-            aria-label="Email address"
             className="newsletter__input"
           />
           <Button variant="primary">Join Now</Button>

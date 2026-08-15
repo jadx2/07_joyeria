@@ -28,6 +28,17 @@ const Navigation = () => {
     return () => window.removeEventListener("scroll", alScrollear)
   }, [])
 
+  useEffect(() => {
+    if (!menuAbierto) return
+    const alTecla = (evento) => {
+      if (evento.key === "Escape") {
+        setMenuAbierto(false)
+      }
+    }
+    document.addEventListener("keydown", alTecla)
+    return () => document.removeEventListener("keydown", alTecla)
+  }, [menuAbierto])
+
   const etiquetaCarrito =
     totalUnidades > 0
       ? `${totalUnidades} ${totalUnidades === 1 ? "item" : "items"} in cart`
