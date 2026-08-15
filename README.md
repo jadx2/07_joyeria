@@ -188,14 +188,14 @@ No hardcodear colores ni tamaños: si falta un valor, se agrega ahí primero.
 
 | Muestra                                                   | Variable             | Valor                       | Uso                           |
 | ---------------------------------------------------------- | -------------------- | --------------------------- | ----------------------------- |
-| ![](https://placehold.co/15x15/faf7f2/faf7f2.png)         | `--color-bg`         | `#faf7f2`                   | Fondo general, marfil         |
-| ![](https://placehold.co/15x15/efe7d6/efe7d6.png)         | `--color-bg-alt`     | `#efe7d6`                   | Fondo de secciones alternas   |
-| ![](https://placehold.co/15x15/1c1a16/1c1a16.png)         | `--color-text`       | `#1c1a16`                   | Texto principal, casi negro   |
-| ![](https://placehold.co/15x15/7a6e5f/7a6e5f.png)         | `--color-text-muted` | `#7a6e5f`                   | Texto secundario, gris cálido |
-| ![](https://placehold.co/15x15/b8976a/b8976a.png)         | `--color-primary`    | `#b8976a`                   | Oro principal                 |
-| ![](https://placehold.co/15x15/c9a96e/c9a96e.png)         | `--color-accent`     | `#c9a96e`                   | Oro claro, para detalles      |
-| ![](https://placehold.co/15x15/faf7f2/faf7f2.png)         | `--color-light`      | `#faf7f2`                   | Texto sobre fondo oscuro      |
-| ![](https://placehold.co/15x15/b8976a/b8976a.png)         | `--color-border`     | `rgba(184, 151, 106, 0.25)` | Bordes sutiles                |
+| ![#faf7f2](https://placehold.co/15x15/faf7f2/faf7f2.png)  | `--color-bg`         | `#faf7f2`                   | Fondo general, marfil         |
+| ![#efe7d6](https://placehold.co/15x15/efe7d6/efe7d6.png)  | `--color-bg-alt`     | `#efe7d6`                   | Fondo de secciones alternas   |
+| ![#1c1a16](https://placehold.co/15x15/1c1a16/1c1a16.png)  | `--color-text`       | `#1c1a16`                   | Texto principal, casi negro   |
+| ![#7a6e5f](https://placehold.co/15x15/7a6e5f/7a6e5f.png)  | `--color-text-muted` | `#7a6e5f`                   | Texto secundario, gris cálido |
+| ![#b8976a](https://placehold.co/15x15/b8976a/b8976a.png)  | `--color-primary`    | `#b8976a`                   | Oro principal                 |
+| ![#c9a96e](https://placehold.co/15x15/c9a96e/c9a96e.png)  | `--color-accent`     | `#c9a96e`                   | Oro claro, para detalles      |
+| ![#faf7f2](https://placehold.co/15x15/faf7f2/faf7f2.png)  | `--color-light`      | `#faf7f2`                   | Texto sobre fondo oscuro      |
+| ![#b8976a](https://placehold.co/15x15/b8976a/b8976a.png)  | `--color-border`     | `rgba(184, 151, 106, 0.25)` | Bordes sutiles                |
 
 ### Tipografías
 
