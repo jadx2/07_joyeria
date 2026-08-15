@@ -18,7 +18,6 @@
   align-items: start;
 }
 
-/* ── Líneas del carrito ── */
 .carrito__lineas {
   list-style: none;
 }
@@ -128,7 +127,6 @@
   text-align: right;
 }
 
-/* ── Resumen del pedido ── */
 .resumen {
   display: flex;
   flex-direction: column;
@@ -180,7 +178,6 @@
   line-height: 32px;
 }
 
-/* ── Estado vacío ── */
 .carrito__vacio {
   max-width: 512px;
   margin: 0 auto;

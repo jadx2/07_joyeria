@@ -48,7 +48,6 @@
   align-items: start;
 }
 
-/* ── Formulario ── */
 .pago__formulario {
   display: flex;
   flex-direction: column;
@@ -115,7 +114,6 @@
   margin-top: var(--space-xs);
 }
 
-/* ── Resumen del pedido ── */
 .pago__resumen {
   display: flex;
   flex-direction: column;

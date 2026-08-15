@@ -155,7 +155,6 @@
     bottom: 32px;
   }
 
-  /* Área táctil de ~44px para tocar con el dedo */
   .hero__punto::after {
     inset: -20px -16px;
   }

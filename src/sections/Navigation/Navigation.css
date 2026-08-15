@@ -115,7 +115,6 @@
   line-height: 1;
 }
 
-/* Hamburguesa: oculta en escritorio */
 .navigation__hamburguesa {
   display: none;
   background: transparent;
@@ -135,7 +134,6 @@
   color: var(--color-primary);
 }
 
-/* Panel móvil */
 .navigation__panel-movil {
   position: fixed;
   top: 80px;
@@ -177,7 +175,6 @@
     display: none;
   }
 
-  /* Sin los enlaces, el carrito se iría al centro del space-between */
   .navigation__carrito {
     margin-left: auto;
   }

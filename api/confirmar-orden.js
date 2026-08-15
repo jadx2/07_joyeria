@@ -86,7 +86,6 @@ export default async function handler(req, res) {
 
   const resumen = { numeroOrden, correo, lineas, total }
 
-  // Si ya se envió para esta sesión, no repetir: evita el correo doble al recargar
   if (sesion.metadata?.correoEnviado === "1") {
     return res.status(200).json({ ...resumen, correoEnviado: true })
   }
@@ -107,7 +106,6 @@ export default async function handler(req, res) {
     return res.status(200).json({ ...resumen, correoEnviado: false })
   }
 
-  // El correo ya salió; si marcar la sesión falla, a lo sumo se reenvía en otra recarga
   try {
     await stripe.checkout.sessions.update(sessionId, {
       metadata: { correoEnviado: "1" },

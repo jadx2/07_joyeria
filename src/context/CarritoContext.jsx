@@ -41,7 +41,6 @@ function CarritoProvider({ children }) {
     try {
       localStorage.setItem(CLAVE_CARRITO, JSON.stringify(lineas))
     } catch {
-      // el navegador puede tener bloqueado el almacenamiento del sitio
     }
   }, [lineas])
 

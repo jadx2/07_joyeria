@@ -5,7 +5,6 @@ const Marquee = () => {
   return (
     <section className="marquee">
       <div className="marquee__pista">
-        {/* se duplica el bloque de 4 grupos para que la animación deslice sin cortes, incluso en pantallas anchas */}
         {Array(8)
           .fill(null)
           .map((_, indice) => (
