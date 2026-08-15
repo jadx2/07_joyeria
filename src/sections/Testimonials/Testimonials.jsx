@@ -18,8 +18,8 @@ const Testimonials = () => {
   return (
     <section className="testimonios">
       <div className="testimonios__contenedor">
-        <SectionHeading eyebrow="Testimonials" align="center">
-          <em>Words from those who wear us</em>
+        <SectionHeading eyebrow="Testimonios" align="center">
+          <em>Palabras de quienes nos llevan</em>
         </SectionHeading>
 
         <div className="testimonios__lista">

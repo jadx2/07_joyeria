@@ -17,12 +17,12 @@ const Checkout = () => {
   function validar() {
     const nuevos = {}
     if (!nombre.trim()) {
-      nuevos.nombre = "Enter your full name"
+      nuevos.nombre = "Ingresa tu nombre completo"
     }
     if (!correo.trim()) {
-      nuevos.correo = "Enter your email address"
+      nuevos.correo = "Ingresa tu correo electrónico"
     } else if (!CORREO_VALIDO.test(correo)) {
-      nuevos.correo = "Enter a valid email address"
+      nuevos.correo = "Ingresa un correo electrónico válido"
     }
     return nuevos
   }
@@ -52,7 +52,7 @@ const Checkout = () => {
       window.location = url
     } catch {
       setEnviando(false)
-      setErrores({ envio: "Something went wrong. Please try again." })
+      setErrores({ envio: "Algo salió mal. Inténtalo de nuevo." })
     }
   }
 
@@ -60,19 +60,19 @@ const Checkout = () => {
     <section className="pago">
       <Container>
         <div className="pago__banner">
-          <span className="pago__banner-modo">Demo mode</span>
+          <span className="pago__banner-modo">Modo demo</span>
           <span className="pago__banner-texto">
-            No real payment is processed. Use test card 4242 4242 4242 4242 with
-            any future date and any CVC.
+            No se procesa un pago real. Usa la tarjeta de prueba 4242 4242 4242
+            4242 con cualquier fecha futura y cualquier CVC.
           </span>
         </div>
-        <h1 className="pago__titulo">Checkout</h1>
+        <h1 className="pago__titulo">Pagar</h1>
         <div className="pago__contenido">
           <form className="pago__formulario" onSubmit={manejarEnvio} noValidate>
-            <p className="pago__eyebrow">Contact</p>
+            <p className="pago__eyebrow">Contacto</p>
             <div className="campo">
               <label className="campo__etiqueta" htmlFor="nombre">
-                Full name
+                Nombre completo
               </label>
               <input
                 id="nombre"
@@ -93,7 +93,7 @@ const Checkout = () => {
             </div>
             <div className="campo">
               <label className="campo__etiqueta" htmlFor="correo">
-                Email
+                Correo
               </label>
               <input
                 id="correo"
@@ -122,11 +122,11 @@ const Checkout = () => {
               className="pago__enviar"
               disabled={enviando}
             >
-              {enviando ? "Redirecting…" : "Pay with Card"}
+              {enviando ? "Redirigiendo…" : "Pagar con tarjeta"}
             </Button>
           </form>
           <aside className="pago__resumen">
-            <p className="pago__eyebrow">Order Summary</p>
+            <p className="pago__eyebrow">Resumen del pedido</p>
             {lineas.map(({ producto, cantidad }) => (
               <div className="pago__fila" key={producto.id}>
                 <span className="pago__fila-etiqueta">
@@ -138,8 +138,8 @@ const Checkout = () => {
               </div>
             ))}
             <div className="pago__fila">
-              <span className="pago__fila-etiqueta">Shipping</span>
-              <span className="pago__fila-valor">Complimentary</span>
+              <span className="pago__fila-etiqueta">Envío</span>
+              <span className="pago__fila-valor">De cortesía</span>
             </div>
             <div className="pago__divisor" />
             <div className="pago__fila pago__fila--total">

@@ -2,22 +2,22 @@ export const testimonios = [
   {
     id: 1,
     nombre: "Sophia Laurent",
-    rol: "Art Director, Paris",
-    cita: "The craftsmanship is extraordinary. Each piece feels like it was made specifically for me — timeless, precise, and deeply personal.",
+    rol: "Directora de arte, París",
+    cita: "La artesanía es extraordinaria. Cada pieza parece hecha especialmente para mí: atemporal, precisa y profundamente personal.",
     estrellas: 5,
   },
   {
     id: 2,
     nombre: "Amara Osei",
-    rol: "Creative Consultant, London",
-    cita: "I wore the Radiance necklace to my wedding and received more compliments than I could count. The most beautiful piece I own.",
+    rol: "Consultora creativa, Londres",
+    cita: "Llevé el collar Radiante a mi boda y recibí más cumplidos de los que pude contar. La pieza más hermosa que tengo.",
     estrellas: 5,
   },
   {
     id: 3,
     nombre: "Elena Marchetti",
-    rol: "Fashion Editor, Milan",
-    cita: "In a market saturated with noise, Beautiful Princess stands apart. Their restraint is their greatest luxury — nothing superfluous, everything intentional.",
+    rol: "Editora de moda, Milán",
+    cita: "En un mercado saturado de ruido, Beautiful Princess se distingue. Su contención es su mayor lujo: nada sobra, todo es intencional.",
     estrellas: 5,
   },
 ]

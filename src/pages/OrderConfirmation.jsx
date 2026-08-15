@@ -59,20 +59,20 @@ const OrderConfirmation = () => {
     <section className="confirmacion">
       <Container>
         {estado === "cargando" && (
-          <p className="confirmacion__cargando">Confirming your order…</p>
+          <p className="confirmacion__cargando">Confirmando tu pedido…</p>
         )}
 
         {estado === "error" && (
           <div className="confirmacion__aviso">
             <h1 className="confirmacion__titulo">
-              We could not confirm your order
+              No pudimos confirmar tu pedido
             </h1>
             <p className="confirmacion__error">
-              We could not verify this payment. If you were charged, contact us
-              with your order details.
+              No pudimos verificar este pago. Si te cobraron, contáctanos con
+              los datos de tu pedido.
             </p>
             <Link to="/">
-              <Button variant="outline">Back to Home</Button>
+              <Button variant="outline">Volver al inicio</Button>
             </Link>
           </div>
         )}
@@ -82,16 +82,16 @@ const OrderConfirmation = () => {
             <span className="confirmacion__ornamento" aria-hidden="true">
               ✓
             </span>
-            <h1 className="confirmacion__titulo">Thank you for your order</h1>
-            <p className="confirmacion__orden">Order {orden.numeroOrden}</p>
+            <h1 className="confirmacion__titulo">Gracias por tu pedido</h1>
+            <p className="confirmacion__orden">Pedido {orden.numeroOrden}</p>
             {orden.correoEnviado ? (
               <p className="confirmacion__correo">
-                A confirmation email is on its way to {orden.correo}
+                Un correo de confirmación está en camino a {orden.correo}
               </p>
             ) : (
               <p className="confirmacion__correo confirmacion__correo--fallido">
-                Your order is confirmed, but we could not send the confirmation
-                email. Keep your order number.
+                Tu pedido está confirmado, pero no pudimos enviar el correo de
+                confirmación. Guarda tu número de pedido.
               </p>
             )}
             <div className="confirmacion__resumen">
@@ -114,7 +114,7 @@ const OrderConfirmation = () => {
               </div>
             </div>
             <Link to="/">
-              <Button variant="outline">Back to Home</Button>
+              <Button variant="outline">Volver al inicio</Button>
             </Link>
           </div>
         )}

@@ -1,5 +1,5 @@
 export const mensajesMarquee = [
-  "Free Shipping on Orders Over $500",
-  "Complimentary Gift Wrapping",
-  "Certified Ethically Sourced Gemstones",
+  "Envío gratis en pedidos mayores a $500",
+  "Envoltorio de regalo de cortesía",
+  "Gemas certificadas de origen ético",
 ]

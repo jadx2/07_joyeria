@@ -13,7 +13,7 @@ function CollectionCard({ imagen, titulo, piezas, etiqueta, enlace }) {
         </div>
         <div className="tarjeta__accion">
           <Link to={enlace} className="tarjeta__enlace">
-            <Button variant="light">Explore</Button>
+            <Button variant="light">Explorar</Button>
           </Link>
         </div>
       </div>

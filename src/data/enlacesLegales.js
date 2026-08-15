@@ -1,5 +1,5 @@
 export const enlacesLegales = [
-  "Privacy Policy",
-  "Terms of Service",
-  "Cookie Settings",
+  "Política de privacidad",
+  "Términos de servicio",
+  "Configuración de cookies",
 ]
