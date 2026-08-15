@@ -27,6 +27,7 @@ const Testimonials = () => {
             <div
               key={testimonio.id}
               className="testimonios__item"
+              aria-hidden={indice !== actual}
               style={{
                 opacity: indice === actual ? 1 : 0,
                 position: indice === actual ? "relative" : "absolute",

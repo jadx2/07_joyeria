@@ -50,7 +50,7 @@
 
 .featured-piece__descripcion {
   font-size: 14px;
-  color: rgba(250, 247, 242, 0.75);
+  color: var(--color-sobre-foto);
   margin-top: var(--space-sm);
 }
 

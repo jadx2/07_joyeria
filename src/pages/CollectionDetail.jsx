@@ -28,6 +28,7 @@ const CollectionDetail = () => {
           <p className="coleccion__descripcion">{coleccion.descripcion}</p>
           <p className="coleccion__conteo">{coleccion.piezas}</p>
         </header>
+        <h2 className="visualmente-oculto">Pieces</h2>
         <div className="coleccion__grilla">
           {piezas.map((producto) => (
             <ProductCard

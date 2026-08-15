@@ -38,6 +38,7 @@ const Cart = () => {
       <Container>
         <h1 className="carrito__titulo">Your Cart</h1>
         <div className="carrito__contenido">
+          <h2 className="visualmente-oculto">Items</h2>
           <ul className="carrito__lineas">
             {lineas.map(({ producto, cantidad }) => (
               <li key={producto.id} className="linea">
@@ -47,7 +48,7 @@ const Cart = () => {
                   className="linea__imagen"
                 />
                 <div className="linea__info">
-                  <h2 className="linea__nombre">{producto.nombre}</h2>
+                  <h3 className="linea__nombre">{producto.nombre}</h3>
                   <p className="linea__material">{producto.material}</p>
                   <button
                     className="linea__quitar"
@@ -82,7 +83,7 @@ const Cart = () => {
             ))}
           </ul>
           <aside className="resumen">
-            <p className="resumen__titulo">Order Summary</p>
+            <h2 className="resumen__titulo">Order Summary</h2>
             <div className="resumen__fila">
               <span className="resumen__etiqueta">Subtotal</span>
               <span className="resumen__valor">{formatearPrecio(total)}</span>
