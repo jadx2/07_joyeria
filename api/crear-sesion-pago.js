@@ -35,13 +35,18 @@ export default async function handler(req, res) {
 
   const origen = req.headers.origin
 
-  const sesion = await stripe.checkout.sessions.create({
-    mode: "payment",
-    line_items: lineItems,
-    customer_email: correo,
-    success_url: `${origen}/order/confirmado?session_id={CHECKOUT_SESSION_ID}`,
-    cancel_url: `${origen}/checkout/cancelado`,
-  })
+  try {
+    const sesion = await stripe.checkout.sessions.create({
+      mode: "payment",
+      line_items: lineItems,
+      customer_email: correo,
+      success_url: `${origen}/order/confirmado?session_id={CHECKOUT_SESSION_ID}`,
+      cancel_url: `${origen}/checkout/cancelado`,
+    })
 
-  return res.status(200).json({ url: sesion.url })
+    return res.status(200).json({ url: sesion.url })
+  } catch (error) {
+    console.error("No se pudo crear la sesión de pago:", error.message)
+    return res.status(500).json({ error: "No se pudo crear la sesión de pago" })
+  }
 }

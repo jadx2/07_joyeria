@@ -13,12 +13,6 @@ h3 {
   font-weight: 400;
 }
 
-.container {
-  max-width: var(--container-max);
-  margin: 0 auto;
-  padding: 0 var(--container-pad);
-}
-
 :focus-visible {
   outline: 2px solid var(--color-primary);
   outline-offset: 3px;

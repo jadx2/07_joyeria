@@ -22,7 +22,7 @@
 
 .newsletter__input {
   flex: 1;
-  border: 1px solid rgba(184, 151, 106, 0.35);
+  border: 1px solid var(--color-primary-muted);
   border-right: none;
   padding: 16px 20px;
   font-family: var(--font-body);
@@ -59,6 +59,6 @@
   }
 
   .newsletter__input {
-    border-right: 1px solid rgba(184, 151, 106, 0.35);
+    border-right: 1px solid var(--color-primary-muted);
   }
 }

@@ -1,10 +1,11 @@
-import { Navigate, useParams } from "react-router-dom"
+import { useParams } from "react-router-dom"
 import "./CollectionDetail.css"
 import Container from "../components/Container/Container"
 import ProductCard from "../components/ProductCard/ProductCard"
 import { colecciones } from "../data/colecciones"
 import { productos } from "../data/productos"
 import { useCarrito } from "../context/useCarrito"
+import NotFound from "./NotFound"
 
 const CollectionDetail = () => {
   const { coleccionId } = useParams()
@@ -14,7 +15,7 @@ const CollectionDetail = () => {
   const coleccion = colecciones.find((coleccion) => coleccion.id === id)
 
   if (!coleccion) {
-    return <Navigate to="/404" replace />
+    return <NotFound />
   }
 
   const piezas = productos.filter((producto) => producto.coleccionId === id)
