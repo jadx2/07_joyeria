@@ -1,9 +1,25 @@
 # 07_joyeria
 
+![Captura del sitio](docs/captura.png)
+
+**[Ver el sitio en vivo →](https://joyeria-eight.vercel.app/)**
+
 Landing de joyería artesanal hecha con React + Vite. La home tiene las
 secciones de hero, colecciones, pieza destacada, artesanía, testimonios y
 newsletter, y la tienda vive en sus propias rutas. Proyecto del curso de
 Cibertec.
+
+## Tecnologías
+
+| Tecnología   | Para qué                                                                |
+| ------------ | ----------------------------------------------------------------------- |
+| React 19     | La UI se arma con componentes reutilizables (Button, Tag, Container...) |
+| Vite         | Servidor de desarrollo y build, con recarga instantánea al guardar      |
+| React Router | Rutas de la tienda (carrito, checkout, detalle) sin recargar la página  |
+| CSS puro     | Variables nativas en `variables.css`, sin Tailwind ni preprocesador     |
+| react-icons  | Set de iconos SVG ya hechos, en vez de dibujar cada uno a mano          |
+| Stripe       | Pasarela de pago del checkout, en modo prueba                           |
+| Nodemailer   | Envía el correo de confirmación desde una función serverless            |
 
 ## Requisitos
 
@@ -170,16 +186,16 @@ No hardcodear colores ni tamaños: si falta un valor, se agrega ahí primero.
 
 ### Colores
 
-| Variable             | Valor                       | Uso                           |
-| -------------------- | --------------------------- | ----------------------------- |
-| `--color-bg`         | `#faf7f2`                   | Fondo general, marfil         |
-| `--color-bg-alt`     | `#efe7d6`                   | Fondo de secciones alternas   |
-| `--color-text`       | `#1c1a16`                   | Texto principal, casi negro   |
-| `--color-text-muted` | `#7a6e5f`                   | Texto secundario, gris cálido |
-| `--color-primary`    | `#b8976a`                   | Oro principal                 |
-| `--color-accent`     | `#c9a96e`                   | Oro claro, para detalles      |
-| `--color-light`      | `#faf7f2`                   | Texto sobre fondo oscuro      |
-| `--color-border`     | `rgba(184, 151, 106, 0.25)` | Bordes sutiles                |
+| Muestra                                                   | Variable             | Valor                       | Uso                           |
+| ---------------------------------------------------------- | -------------------- | --------------------------- | ----------------------------- |
+| ![#faf7f2](https://placehold.co/15x15/faf7f2/faf7f2.png)  | `--color-bg`         | `#faf7f2`                   | Fondo general, marfil         |
+| ![#efe7d6](https://placehold.co/15x15/efe7d6/efe7d6.png)  | `--color-bg-alt`     | `#efe7d6`                   | Fondo de secciones alternas   |
+| ![#1c1a16](https://placehold.co/15x15/1c1a16/1c1a16.png)  | `--color-text`       | `#1c1a16`                   | Texto principal, casi negro   |
+| ![#7a6e5f](https://placehold.co/15x15/7a6e5f/7a6e5f.png)  | `--color-text-muted` | `#7a6e5f`                   | Texto secundario, gris cálido |
+| ![#b8976a](https://placehold.co/15x15/b8976a/b8976a.png)  | `--color-primary`    | `#b8976a`                   | Oro principal                 |
+| ![#c9a96e](https://placehold.co/15x15/c9a96e/c9a96e.png)  | `--color-accent`     | `#c9a96e`                   | Oro claro, para detalles      |
+| ![#faf7f2](https://placehold.co/15x15/faf7f2/faf7f2.png)  | `--color-light`      | `#faf7f2`                   | Texto sobre fondo oscuro      |
+| ![#b8976a](https://placehold.co/15x15/b8976a/b8976a.png)  | `--color-border`     | `rgba(184, 151, 106, 0.25)` | Bordes sutiles                |
 
 ### Tipografías
 
@@ -207,6 +223,25 @@ No hardcodear colores ni tamaños: si falta un valor, se agrega ahí primero.
 | `--container-pad` | `56px`       | Padding lateral                                     |
 | `--transition`    | `300ms ease` | Transición base de la interfaz                      |
 
+## Componentes
+
+| Componente         | Props                                                                        | Dónde se usa                                                                                    |
+| ------------------ | ---------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `<Button>`         | `variant` (`primary` \| `light`), `onClick`, `type`, `disabled`, `className` | Hero, FeaturedPiece, Newsletter, Cart, Checkout, CheckoutCancelled, NotFound, OrderConfirmation |
+| `<Container>`      | `className`                                                                  | Casi todas las secciones y páginas — centra el contenido a 1023px                               |
+| `<SectionHeading>` | `eyebrow`, `align` (`left` \| `center`)                                      | Collections, Craftsmanship, Newsletter, Testimonials                                            |
+| `<Tag>`            | solo `children`                                                              | CollectionCard                                                                                  |
+| `<CollectionCard>` | `imagen`, `titulo`, `piezas`, `etiqueta`, `enlace`                           | Collections                                                                                     |
+| `<ProductCard>`    | `imagen`, `nombre`, `material`, `precio`, `onAgregar`                        | CollectionDetail                                                                                |
+
+## Créditos
+
+- **Fotos:** todas de [Unsplash](https://unsplash.com), bajo su licencia de uso
+  gratuito. Detalle por foto y autor en
+  [`src/assets/images/CREDITOS.md`](src/assets/images/CREDITOS.md).
+- **Iconos:** [react-icons](https://react-icons.github.io/react-icons/).
+- **Diseño:** wireframe de Figma del curso ("Jewelry HiFi Wireframe").
+
 ## Cómo contribuir
 
 Antes de escribir código, lee [CONTRIBUTING.md](CONTRIBUTING.md): convenciones
@@ -214,4 +249,10 @@ de nombres, BEM, y el flujo de ramas y PRs.
 
 ## Integrantes
 
-<!-- TODO: cada integrante se agrega aquí (nombre y usuario de GitHub) -->
+| Integrante           | GitHub                                               | Aporte                                                                                                                                                                                                          |
+| -------------------- | ---------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Jaim Delmar (líder)  | [@jadx2](https://github.com/jadx2)                   | Setup del proyecto, sistema de diseño, rutas, estado del carrito, pagos con Stripe, correo de confirmación y despliegue — [issues](https://github.com/jadx2/07_joyeria/issues?q=is%3Aissue+assignee%3Ajadx2)    |
+| Joy Carolin Narro Garcia    | [@Carolin26](https://github.com/Carolin26)           | Componentes Tag, SectionHeading y Container, imágenes del proyecto, testimonios y responsive de la tienda — [issues](https://github.com/jadx2/07_joyeria/issues?q=is%3Aissue+assignee%3ACarolin26)              |
+| Ratsinller Franco Vilchez   | [@vilchez-lan](https://github.com/vilchez-lan)       | Navegación de escritorio y menú móvil, responsive de navegación, hero y colecciones — [issues](https://github.com/jadx2/07_joyeria/issues?q=is%3Aissue+assignee%3Avilchez-lan)                                  |
+| Grace Kelly Davila Santa Cruz | [@GraceKelly1993](https://github.com/GraceKelly1993) | Componentes Button y CollectionCard, Hero, Featured Piece, Footer, Newsletter y responsive del resto de secciones — [issues](https://github.com/jadx2/07_joyeria/issues?q=is%3Aissue+assignee%3AGraceKelly1993) |
+| Bethzy Mamani Incahuanaco   | [@Bethzy1994](https://github.com/Bethzy1994)         | Accesibilidad básica y consistencia de hovers y transiciones — [issues](https://github.com/jadx2/07_joyeria/issues?q=is%3Aissue+assignee%3ABethzy1994)                                                          |
