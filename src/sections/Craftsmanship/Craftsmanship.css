@@ -80,32 +80,6 @@
   color: var(--color-text-muted);
 }
 
-.craftsmanship__enlace {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-xs);
-  margin-top: var(--space-lg);
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: var(--color-text-muted);
-  text-decoration: none;
-  cursor: pointer;
-  transition: color var(--transition);
-}
-
-.craftsmanship__enlace:hover {
-  color: var(--color-text);
-}
-
-.craftsmanship__enlace-icono {
-  transition: transform var(--transition);
-}
-
-.craftsmanship__enlace:hover .craftsmanship__enlace-icono {
-  transform: translateX(4px);
-}
-
 @media (max-width: 1023px) {
   .craftsmanship__grid {
     grid-template-columns: 1fr;

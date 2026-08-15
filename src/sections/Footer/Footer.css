@@ -6,7 +6,7 @@
 
 .footer__columnas {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: var(--space-lg);
 }
 
@@ -27,23 +27,6 @@
   font-size: 14px;
   color: var(--color-text-muted);
   margin-bottom: var(--space-sm);
-}
-
-.footer__redes {
-  display: flex;
-  gap: var(--space-sm);
-  color: var(--color-text-muted);
-}
-
-.footer__red {
-  color: inherit;
-  display: flex;
-  cursor: pointer;
-  transition: color var(--transition);
-}
-
-.footer__red:hover {
-  color: var(--color-text);
 }
 
 .footer__columna-titulo {
@@ -90,33 +73,13 @@
   color: var(--color-text-muted);
 }
 
-.footer__legales {
-  display: flex;
-  gap: 24px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.footer__enlace-legal {
-  font-size: 11px;
-  color: var(--color-text-muted);
-  text-decoration: none;
-  cursor: pointer;
-  transition: color var(--transition);
-}
-
-.footer__enlace-legal:hover {
-  color: var(--color-text);
-}
-
 @media (max-width: 1023px) {
   .footer__columnas {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .footer__marca {
-    grid-column: span 3;
+    grid-column: span 2;
   }
 }
 

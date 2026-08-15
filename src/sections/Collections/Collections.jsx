@@ -1,5 +1,4 @@
 import "./Collections.css"
-import { LuArrowRight } from "react-icons/lu"
 import Container from "../../components/Container/Container"
 import SectionHeading from "../../components/SectionHeading/SectionHeading"
 import CollectionCard from "../../components/CollectionCard/CollectionCard"
@@ -22,10 +21,6 @@ const Collections = () => {
             <br />
             <em>cada ocasión</em>
           </SectionHeading>
-          <a href="#" className="collections__enlace">
-            Ver todo
-            <LuArrowRight size={12} className="collections__enlace-icono" />
-          </a>
         </div>
         <div className="collections__grilla">
           {colecciones.map((coleccion, indice) => (

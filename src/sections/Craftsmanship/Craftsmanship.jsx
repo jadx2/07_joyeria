@@ -1,4 +1,3 @@
-import { LuArrowRight } from "react-icons/lu"
 import "./Craftsmanship.css"
 import Container from "../../components/Container/Container"
 import SectionHeading from "../../components/SectionHeading/SectionHeading"
@@ -60,10 +59,6 @@ const Craftsmanship = () => {
                 </div>
               ))}
             </div>
-            <a href="#" className="craftsmanship__enlace">
-              Nuestro manifiesto
-              <LuArrowRight size={12} className="craftsmanship__enlace-icono" />
-            </a>
           </div>
         </div>
       </Container>

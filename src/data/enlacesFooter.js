@@ -2,24 +2,14 @@ export const enlacesFooter = [
   {
     titulo: "Tienda",
     enlaces: [
-      "Anillos",
-      "Collares",
-      "Aretes",
-      "Pulseras",
-      "Tarjetas de regalo",
+      { texto: "Anillos", destino: "/collections/1" },
+      { texto: "Collares", destino: "/collections/2" },
+      { texto: "Aretes", destino: "/collections/3" },
+      { texto: "Pulseras", destino: "/collections/4" },
     ],
   },
   {
     titulo: "Maison",
-    enlaces: ["Nuestra historia", "Artesanía", "Sostenibilidad", "Diario"],
-  },
-  {
-    titulo: "Ayuda",
-    enlaces: [
-      "Guía de tallas",
-      "Cuidado y reparación",
-      "Envíos y devoluciones",
-      "Contáctanos",
-    ],
+    enlaces: [{ texto: "Artesanía", destino: "/#craftsmanship" }],
   },
 ]

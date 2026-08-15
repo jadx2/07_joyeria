@@ -7,8 +7,6 @@ import "./Navigation.css"
 const enlaces = [
   { texto: "Colecciones", destino: "/#collections" },
   { texto: "Artesanía", destino: "/#craftsmanship" },
-  { texto: "Nosotros", destino: "/#craftsmanship" },
-  { texto: "Diario", destino: null },
 ]
 
 const Navigation = () => {
@@ -63,21 +61,15 @@ const Navigation = () => {
       </Link>
 
       <nav className="navigation__enlaces">
-        {enlaces.map((enlace) =>
-          enlace.destino ? (
-            <Link
-              key={enlace.texto}
-              to={enlace.destino}
-              className="navigation__link"
-            >
-              {enlace.texto}
-            </Link>
-          ) : (
-            <a key={enlace.texto} href="#" className="navigation__link">
-              {enlace.texto}
-            </a>
-          ),
-        )}
+        {enlaces.map((enlace) => (
+          <Link
+            key={enlace.texto}
+            to={enlace.destino}
+            className="navigation__link"
+          >
+            {enlace.texto}
+          </Link>
+        ))}
       </nav>
 
       <Link
@@ -103,27 +95,16 @@ const Navigation = () => {
 
       {menuAbierto && (
         <div className="navigation__panel-movil">
-          {enlaces.map((enlace) =>
-            enlace.destino ? (
-              <Link
-                key={enlace.texto}
-                to={enlace.destino}
-                className="navigation__link-movil"
-                onClick={() => setMenuAbierto(false)}
-              >
-                {enlace.texto}
-              </Link>
-            ) : (
-              <a
-                key={enlace.texto}
-                href="#"
-                className="navigation__link-movil"
-                onClick={() => setMenuAbierto(false)}
-              >
-                {enlace.texto}
-              </a>
-            ),
-          )}
+          {enlaces.map((enlace) => (
+            <Link
+              key={enlace.texto}
+              to={enlace.destino}
+              className="navigation__link-movil"
+              onClick={() => setMenuAbierto(false)}
+            >
+              {enlace.texto}
+            </Link>
+          ))}
         </div>
       )}
     </header>
