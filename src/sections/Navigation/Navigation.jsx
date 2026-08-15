@@ -2,14 +2,8 @@ import { useEffect, useState } from "react"
 import { Link, useLocation } from "react-router-dom"
 import { LuMenu, LuShoppingBag, LuX } from "react-icons/lu"
 import { useCarrito } from "../../context/useCarrito"
+import { enlacesNavegacion as enlaces } from "../../data/enlacesNavegacion"
 import "./Navigation.css"
-
-const enlaces = [
-  { texto: "Colecciones", destino: "/#collections" },
-  { texto: "Artesanía", destino: "/#craftsmanship" },
-  { texto: "Nosotros", destino: "/#craftsmanship" },
-  { texto: "Diario", destino: null },
-]
 
 const Navigation = () => {
   const [menuAbierto, setMenuAbierto] = useState(false)

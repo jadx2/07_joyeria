@@ -96,7 +96,7 @@ const OrderConfirmation = () => {
             )}
             <div className="confirmacion__resumen">
               {orden.lineas.map((linea) => (
-                <div className="confirmacion__fila" key={linea.nombre}>
+                <div className="confirmacion__fila" key={linea.id}>
                   <span className="confirmacion__fila-etiqueta">
                     {linea.nombre} × {linea.cantidad}
                   </span>
