@@ -1,9 +1,25 @@
 # 07_joyeria
 
+<!-- TODO: arrastrar aquí una captura de la página completa, ej. docs/captura.png -->
+
+**[Ver el sitio en vivo →](https://joyeria-eight.vercel.app/)**
+
 Landing de joyería artesanal hecha con React + Vite. La home tiene las
 secciones de hero, colecciones, pieza destacada, artesanía, testimonios y
 newsletter, y la tienda vive en sus propias rutas. Proyecto del curso de
 Cibertec.
+
+## Tecnologías
+
+| Tecnología   | Para qué                                                                |
+| ------------ | ----------------------------------------------------------------------- |
+| React 19     | La UI se arma con componentes reutilizables (Button, Tag, Container...) |
+| Vite         | Servidor de desarrollo y build, con recarga instantánea al guardar      |
+| React Router | Rutas de la tienda (carrito, checkout, detalle) sin recargar la página  |
+| CSS puro     | Variables nativas en `variables.css`, sin Tailwind ni preprocesador     |
+| react-icons  | Set de iconos SVG ya hechos, en vez de dibujar cada uno a mano          |
+| Stripe       | Pasarela de pago del checkout, en modo prueba                           |
+| Nodemailer   | Envía el correo de confirmación desde una función serverless            |
 
 ## Requisitos
 
@@ -207,6 +223,25 @@ No hardcodear colores ni tamaños: si falta un valor, se agrega ahí primero.
 | `--container-pad` | `56px`       | Padding lateral                                     |
 | `--transition`    | `300ms ease` | Transición base de la interfaz                      |
 
+## Componentes
+
+| Componente         | Props                                                                        | Dónde se usa                                                                                    |
+| ------------------ | ---------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `<Button>`         | `variant` (`primary` \| `light`), `onClick`, `type`, `disabled`, `className` | Hero, FeaturedPiece, Newsletter, Cart, Checkout, CheckoutCancelled, NotFound, OrderConfirmation |
+| `<Container>`      | `className`                                                                  | Casi todas las secciones y páginas — centra el contenido a 1023px                               |
+| `<SectionHeading>` | `eyebrow`, `align` (`left` \| `center`)                                      | Collections, Craftsmanship, Newsletter, Testimonials                                            |
+| `<Tag>`            | solo `children`                                                              | CollectionCard                                                                                  |
+| `<CollectionCard>` | `imagen`, `titulo`, `piezas`, `etiqueta`, `enlace`                           | Collections                                                                                     |
+| `<ProductCard>`    | `imagen`, `nombre`, `material`, `precio`, `onAgregar`                        | CollectionDetail                                                                                |
+
+## Créditos
+
+- **Fotos:** todas de [Unsplash](https://unsplash.com), bajo su licencia de uso
+  gratuito. Detalle por foto y autor en
+  [`src/assets/images/CREDITOS.md`](src/assets/images/CREDITOS.md).
+- **Iconos:** [react-icons](https://react-icons.github.io/react-icons/).
+- **Diseño:** wireframe de Figma del curso ("Jewelry HiFi Wireframe").
+
 ## Cómo contribuir
 
 Antes de escribir código, lee [CONTRIBUTING.md](CONTRIBUTING.md): convenciones
@@ -214,4 +249,10 @@ de nombres, BEM, y el flujo de ramas y PRs.
 
 ## Integrantes
 
-<!-- TODO: cada integrante se agrega aquí (nombre y usuario de GitHub) -->
+| Integrante           | GitHub                                               | Aporte                                                                                                                                                                                                          |
+| -------------------- | ---------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Jaim Delmar (líder)  | [@jadx2](https://github.com/jadx2)                   | Setup del proyecto, sistema de diseño, rutas, estado del carrito, pagos con Stripe, correo de confirmación y despliegue — [issues](https://github.com/jadx2/07_joyeria/issues?q=is%3Aissue+assignee%3Ajadx2)    |
+| Carolin Narro Garcia | [@Carolin26](https://github.com/Carolin26)           | Componentes Tag, SectionHeading y Container, imágenes del proyecto, testimonios y responsive de la tienda — [issues](https://github.com/jadx2/07_joyeria/issues?q=is%3Aissue+assignee%3ACarolin26)              |
+| vilchez-lan          | [@vilchez-lan](https://github.com/vilchez-lan)       | Navegación de escritorio y menú móvil, responsive de navegación, hero y colecciones — [issues](https://github.com/jadx2/07_joyeria/issues?q=is%3Aissue+assignee%3Avilchez-lan)                                  |
+| GraceKelly1993       | [@GraceKelly1993](https://github.com/GraceKelly1993) | Componentes Button y CollectionCard, Hero, Featured Piece, Footer, Newsletter y responsive del resto de secciones — [issues](https://github.com/jadx2/07_joyeria/issues?q=is%3Aissue+assignee%3AGraceKelly1993) |
+| Bethzy               | [@Bethzy1994](https://github.com/Bethzy1994)         | Accesibilidad básica y consistencia de hovers y transiciones — [issues](https://github.com/jadx2/07_joyeria/issues?q=is%3Aissue+assignee%3ABethzy1994)                                                          |
