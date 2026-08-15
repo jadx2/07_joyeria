@@ -12,8 +12,8 @@ const Footer = () => {
           <div className="footer__marca">
             <p className="footer__marca-nombre">Beautiful Princess</p>
             <p className="footer__marca-descripcion">
-              Handcrafted jewelry for those who value intention over excess.
-              Made in Perú since 2016.
+              Joyería hecha a mano para quienes valoran la intención por encima
+              del exceso. Hecha en el Perú desde 2016.
             </p>
             <div className="footer__redes">
               <a href="#" aria-label="Instagram" className="footer__red">
@@ -41,7 +41,7 @@ const Footer = () => {
         </div>
         <div className="footer__inferior">
           <p className="footer__copyright">
-            © 2026 Beautiful Princess. All rights reserved.
+            © 2026 Beautiful Princess. Todos los derechos reservados.
           </p>
           <ul className="footer__legales">
             {enlacesLegales.map((enlace) => (

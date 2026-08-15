@@ -23,12 +23,12 @@ const CollectionDetail = () => {
     <section className="coleccion">
       <Container>
         <header className="coleccion__encabezado">
-          <p className="coleccion__sobretitulo">Collection</p>
+          <p className="coleccion__sobretitulo">Colección</p>
           <h1 className="coleccion__titulo">{coleccion.titulo}</h1>
           <p className="coleccion__descripcion">{coleccion.descripcion}</p>
           <p className="coleccion__conteo">{coleccion.piezas}</p>
         </header>
-        <h2 className="visualmente-oculto">Pieces</h2>
+        <h2 className="visualmente-oculto">Piezas</h2>
         <div className="coleccion__grilla">
           {piezas.map((producto) => (
             <ProductCard

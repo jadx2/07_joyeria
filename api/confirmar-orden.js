@@ -32,8 +32,8 @@ function numeroDeOrden(sessionId) {
 
 const plantilla = ({ nombre, numeroOrden, lineas, total }) => `
   <div style="font-family: Georgia, serif; color: #1C1A16; background: #FAF7F2; padding: 40px;">
-    <h1 style="font-size: 24px; font-weight: normal;">Thank you, ${escapar(nombre)}</h1>
-    <p style="color: #7A6E5F; font-size: 13px; letter-spacing: 2px;">ORDER ${numeroOrden}</p>
+    <h1 style="font-size: 24px; font-weight: normal;">Gracias, ${escapar(nombre)}</h1>
+    <p style="color: #7A6E5F; font-size: 13px; letter-spacing: 2px;">PEDIDO ${numeroOrden}</p>
     <table style="width: 100%; border-collapse: collapse; margin-top: 24px;">
       ${lineas
         .map(
@@ -98,7 +98,7 @@ export default async function handler(req, res) {
     await transporter.sendMail({
       from: `"Beautiful Princess" <${process.env.GMAIL_USER}>`,
       to: correo,
-      subject: `Your order ${numeroOrden}`,
+      subject: `Tu pedido ${numeroOrden}`,
       html: plantilla({ nombre, numeroOrden, lineas, total }),
     })
   } catch (error) {

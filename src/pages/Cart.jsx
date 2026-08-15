@@ -14,17 +14,17 @@ const Cart = () => {
       <section className="carrito">
         <Container>
           <div className="carrito__vacio">
-            <h1 className="carrito__vacio-titulo">Your cart is empty</h1>
+            <h1 className="carrito__vacio-titulo">Tu carrito está vacío</h1>
             <p className="carrito__vacio-texto">
-              Nothing here yet. Explore our collections and find a piece worth
-              keeping.
+              Aún no hay nada. Explora nuestras colecciones y encuentra una
+              pieza que valga la pena.
             </p>
             <div className="carrito__vacio-accion">
               <Button
                 variant="primary"
                 onClick={() => navigate("/#collections")}
               >
-                Explore Collections
+                Explorar colecciones
               </Button>
             </div>
           </div>
@@ -36,9 +36,9 @@ const Cart = () => {
   return (
     <section className="carrito">
       <Container>
-        <h1 className="carrito__titulo">Your Cart</h1>
+        <h1 className="carrito__titulo">Tu carrito</h1>
         <div className="carrito__contenido">
-          <h2 className="visualmente-oculto">Items</h2>
+          <h2 className="visualmente-oculto">Artículos</h2>
           <ul className="carrito__lineas">
             {lineas.map(({ producto, cantidad }) => (
               <li key={producto.id} className="linea">
@@ -54,7 +54,7 @@ const Cart = () => {
                     className="linea__quitar"
                     onClick={() => quitar(producto.id)}
                   >
-                    Remove
+                    Quitar
                   </button>
                 </div>
                 <div className="linea__acciones">
@@ -62,7 +62,7 @@ const Cart = () => {
                     <button
                       className="linea__paso"
                       onClick={() => cambiarCantidad(producto.id, cantidad - 1)}
-                      aria-label="Decrease quantity"
+                      aria-label="Disminuir cantidad"
                     >
                       −
                     </button>
@@ -70,7 +70,7 @@ const Cart = () => {
                     <button
                       className="linea__paso"
                       onClick={() => cambiarCantidad(producto.id, cantidad + 1)}
-                      aria-label="Increase quantity"
+                      aria-label="Aumentar cantidad"
                     >
                       +
                     </button>
@@ -83,14 +83,14 @@ const Cart = () => {
             ))}
           </ul>
           <aside className="resumen">
-            <h2 className="resumen__titulo">Order Summary</h2>
+            <h2 className="resumen__titulo">Resumen del pedido</h2>
             <div className="resumen__fila">
               <span className="resumen__etiqueta">Subtotal</span>
               <span className="resumen__valor">{formatearPrecio(total)}</span>
             </div>
             <div className="resumen__fila">
-              <span className="resumen__etiqueta">Shipping</span>
-              <span className="resumen__valor">Complimentary</span>
+              <span className="resumen__etiqueta">Envío</span>
+              <span className="resumen__valor">De cortesía</span>
             </div>
             <div className="resumen__divisor" />
             <div className="resumen__fila resumen__fila--total">
@@ -98,10 +98,10 @@ const Cart = () => {
               <span className="resumen__total">{formatearPrecio(total)}</span>
             </div>
             <Button variant="primary" onClick={() => navigate("/checkout")}>
-              Checkout
+              Pagar
             </Button>
             <Button variant="outline" onClick={() => navigate("/#collections")}>
-              Continue Shopping
+              Seguir comprando
             </Button>
           </aside>
         </div>

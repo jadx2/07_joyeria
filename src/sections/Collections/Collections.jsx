@@ -17,13 +17,13 @@ const Collections = () => {
     <section className="collections" id="collections">
       <Container>
         <div className="collections__encabezado">
-          <SectionHeading eyebrow="Our Collections">
-            Crafted for
+          <SectionHeading eyebrow="Nuestras colecciones">
+            Hechas para
             <br />
-            <em>Every Occasion</em>
+            <em>cada ocasión</em>
           </SectionHeading>
           <a href="#" className="collections__enlace">
-            View All
+            Ver todo
             <LuArrowRight size={12} className="collections__enlace-icono" />
           </a>
         </div>

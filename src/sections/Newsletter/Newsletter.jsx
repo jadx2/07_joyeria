@@ -16,34 +16,34 @@ const Newsletter = () => {
 
   return (
     <section className="newsletter">
-      <SectionHeading eyebrow="Private Circle" align="center">
-        First access, always
+      <SectionHeading eyebrow="Círculo privado" align="center">
+        Acceso anticipado, siempre
       </SectionHeading>
       <p className="newsletter__descripcion">
-        Join our private circle for early access to new collections, bespoke
-        events, and the stories behind each piece.
+        Únete a nuestro círculo privado para acceso anticipado a nuevas
+        colecciones, eventos exclusivos y las historias detrás de cada pieza.
       </p>
       {suscrito ? (
         <div className="newsletter__exito" aria-live="polite">
-          <p>Thank you for joining us.</p>
+          <p>Gracias por unirte.</p>
         </div>
       ) : (
         <form className="newsletter__formulario" onSubmit={manejarEnvio}>
           <label htmlFor="correo" className="visualmente-oculto">
-            Email address
+            Correo electrónico
           </label>
           <input
             id="correo"
             type="email"
             value={correo}
             onChange={(evento) => setCorreo(evento.target.value)}
-            placeholder="Your email address"
+            placeholder="Tu correo electrónico"
             className="newsletter__input"
           />
-          <Button variant="primary">Join Now</Button>
+          <Button variant="primary">Unirme ahora</Button>
         </form>
       )}
-      <p className="newsletter__nota">No spam. Unsubscribe at any time.</p>
+      <p className="newsletter__nota">Sin spam. Cancela cuando quieras.</p>
     </section>
   )
 }

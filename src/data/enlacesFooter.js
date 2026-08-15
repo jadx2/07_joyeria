@@ -1,19 +1,25 @@
 export const enlacesFooter = [
   {
-    titulo: "Shop",
-    enlaces: ["Rings", "Necklaces", "Earrings", "Bracelets", "Gift Cards"],
+    titulo: "Tienda",
+    enlaces: [
+      "Anillos",
+      "Collares",
+      "Aretes",
+      "Pulseras",
+      "Tarjetas de regalo",
+    ],
   },
   {
     titulo: "Maison",
-    enlaces: ["Our Story", "Craftsmanship", "Sustainability", "Journal"],
+    enlaces: ["Nuestra historia", "Artesanía", "Sostenibilidad", "Diario"],
   },
   {
-    titulo: "Support",
+    titulo: "Ayuda",
     enlaces: [
-      "Sizing Guide",
-      "Care & Repair",
-      "Shipping & Returns",
-      "Contact Us",
+      "Guía de tallas",
+      "Cuidado y reparación",
+      "Envíos y devoluciones",
+      "Contáctanos",
     ],
   },
 ]

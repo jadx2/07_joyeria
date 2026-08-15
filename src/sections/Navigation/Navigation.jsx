@@ -5,10 +5,10 @@ import { useCarrito } from "../../context/useCarrito"
 import "./Navigation.css"
 
 const enlaces = [
-  { texto: "Collections", destino: "/#collections" },
-  { texto: "Craftsmanship", destino: "/#craftsmanship" },
-  { texto: "About", destino: "/#craftsmanship" },
-  { texto: "Journal", destino: null },
+  { texto: "Colecciones", destino: "/#collections" },
+  { texto: "Artesanía", destino: "/#craftsmanship" },
+  { texto: "Nosotros", destino: "/#craftsmanship" },
+  { texto: "Diario", destino: null },
 ]
 
 const Navigation = () => {
@@ -41,8 +41,8 @@ const Navigation = () => {
 
   const etiquetaCarrito =
     totalUnidades > 0
-      ? `${totalUnidades} ${totalUnidades === 1 ? "item" : "items"} in cart`
-      : "Cart"
+      ? `${totalUnidades} ${totalUnidades === 1 ? "artículo" : "artículos"} en el carrito`
+      : "Carrito"
 
   const clases = ["navigation"]
   if (conScroll) {

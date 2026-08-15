@@ -11,7 +11,7 @@ function ProductCard({ imagen, nombre, material, precio, onAgregar }) {
       <p className="producto__precio">{formatearPrecio(precio)}</p>
       <div className="producto__accion">
         <Button variant="primary" onClick={onAgregar}>
-          Add to Cart
+          Añadir al carrito
         </Button>
       </div>
     </div>

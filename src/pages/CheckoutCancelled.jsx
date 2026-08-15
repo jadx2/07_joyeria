@@ -7,17 +7,18 @@ const CheckoutCancelled = () => {
   return (
     <section className="cancelado">
       <Container>
-        <p className="cancelado__eyebrow">Checkout</p>
-        <h1 className="cancelado__titulo">Payment cancelled</h1>
+        <p className="cancelado__eyebrow">Pago</p>
+        <h1 className="cancelado__titulo">Pago cancelado</h1>
         <p className="cancelado__texto">
-          No charge was made. Your cart is exactly as you left it.
+          No se realizó ningún cargo. Tu carrito está exactamente como lo
+          dejaste.
         </p>
         <div className="cancelado__acciones">
           <Link to="/cart">
-            <Button variant="primary">Return to Cart</Button>
+            <Button variant="primary">Volver al carrito</Button>
           </Link>
           <Link to="/">
-            <Button variant="outline">Continue Shopping</Button>
+            <Button variant="outline">Seguir comprando</Button>
           </Link>
         </div>
       </Container>

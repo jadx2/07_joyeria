@@ -8,48 +8,48 @@ function contarPiezas(coleccionId) {
   const piezas = productos.filter(
     (producto) => producto.coleccionId === coleccionId,
   )
-  return `${piezas.length} pieces`
+  return `${piezas.length} piezas`
 }
 
 export const colecciones = [
   {
     id: 1,
     slug: "rings",
-    titulo: "Rings",
+    titulo: "Anillos",
     descripcion:
-      "Hand-set stones in recycled 18k gold. Each ring is finished in our Lima atelier and takes four weeks to make.",
+      "Piedras engastadas a mano en oro 18k reciclado. Cada anillo se termina en nuestro taller de Lima y tarda cuatro semanas.",
     piezas: contarPiezas(1),
     imagen: anillos,
-    etiqueta: "Bestseller",
+    etiqueta: "Más vendido",
   },
   {
     id: 2,
     slug: "necklaces",
-    titulo: "Necklaces",
+    titulo: "Collares",
     descripcion:
-      "Chains and pendants closed link by link, cut from single stones traded along this coast for generations.",
+      "Cadenas y dijes cerrados eslabón por eslabón, tallados de piedras únicas comerciadas en esta costa desde hace generaciones.",
     piezas: contarPiezas(2),
     imagen: collares,
-    etiqueta: "New In",
+    etiqueta: "Nuevo",
   },
   {
     id: 3,
     slug: "earrings",
-    titulo: "Earrings",
+    titulo: "Aretes",
     descripcion:
-      "Filigree woven thread by thread in the Catacaos tradition, light enough to forget you are wearing them.",
+      "Filigrana tejida hilo por hilo en la tradición de Catacaos, tan livianos que olvidas que los llevas.",
     piezas: contarPiezas(3),
     imagen: aretes,
-    etiqueta: "Limited",
+    etiqueta: "Edición limitada",
   },
   {
     id: 4,
     slug: "bracelets",
-    titulo: "Bracelets",
+    titulo: "Pulseras",
     descripcion:
-      "Cuffs and bangles hammered by hand until the surface holds the light of the Andes.",
+      "Brazaletes y aros martillados a mano hasta que la superficie guarda la luz de los Andes.",
     piezas: contarPiezas(4),
     imagen: pulseras,
-    etiqueta: "Classic",
+    etiqueta: "Clásico",
   },
 ]
