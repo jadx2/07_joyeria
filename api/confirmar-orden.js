@@ -77,6 +77,7 @@ export default async function handler(req, res) {
   const numeroOrden = numeroDeOrden(sesion.id)
 
   const lineas = sesion.line_items.data.map((linea) => ({
+    id: linea.id,
     nombre: linea.description,
     cantidad: linea.quantity,
     importe: linea.amount_total,
