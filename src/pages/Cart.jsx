@@ -41,61 +41,61 @@ const Cart = () => {
           <h2 className="visualmente-oculto">Artículos</h2>
           <ul className="carrito__lineas">
             {lineas.map(({ producto, cantidad }) => (
-              <li key={producto.id} className="linea">
+              <li key={producto.id} className="carrito__linea">
                 <img
                   src={producto.imagen}
                   alt={producto.nombre}
-                  className="linea__imagen"
+                  className="carrito__linea-imagen"
                 />
-                <div className="linea__info">
-                  <h3 className="linea__nombre">{producto.nombre}</h3>
-                  <p className="linea__material">{producto.material}</p>
+                <div className="carrito__linea-info">
+                  <h3 className="carrito__linea-nombre">{producto.nombre}</h3>
+                  <p className="carrito__linea-material">{producto.material}</p>
                   <button
-                    className="linea__quitar"
+                    className="carrito__linea-quitar"
                     onClick={() => quitar(producto.id)}
                   >
                     Quitar
                   </button>
                 </div>
-                <div className="linea__acciones">
-                  <div className="linea__stepper">
+                <div className="carrito__linea-acciones">
+                  <div className="carrito__linea-stepper">
                     <button
-                      className="linea__paso"
+                      className="carrito__linea-paso"
                       onClick={() => cambiarCantidad(producto.id, cantidad - 1)}
                       aria-label="Disminuir cantidad"
                     >
                       −
                     </button>
-                    <span className="linea__cantidad">{cantidad}</span>
+                    <span className="carrito__linea-cantidad">{cantidad}</span>
                     <button
-                      className="linea__paso"
+                      className="carrito__linea-paso"
                       onClick={() => cambiarCantidad(producto.id, cantidad + 1)}
                       aria-label="Aumentar cantidad"
                     >
                       +
                     </button>
                   </div>
-                  <p className="linea__total">
+                  <p className="carrito__linea-total">
                     {formatearPrecio(producto.precio * cantidad)}
                   </p>
                 </div>
               </li>
             ))}
           </ul>
-          <aside className="resumen">
-            <h2 className="resumen__titulo">Resumen del pedido</h2>
-            <div className="resumen__fila">
-              <span className="resumen__etiqueta">Subtotal</span>
-              <span className="resumen__valor">{formatearPrecio(total)}</span>
+          <aside className="carrito__resumen">
+            <h2 className="carrito__resumen-titulo">Resumen del pedido</h2>
+            <div className="carrito__resumen-fila">
+              <span className="carrito__resumen-etiqueta">Subtotal</span>
+              <span className="carrito__resumen-valor">{formatearPrecio(total)}</span>
             </div>
-            <div className="resumen__fila">
-              <span className="resumen__etiqueta">Envío</span>
-              <span className="resumen__valor">De cortesía</span>
+            <div className="carrito__resumen-fila">
+              <span className="carrito__resumen-etiqueta">Envío</span>
+              <span className="carrito__resumen-valor">De cortesía</span>
             </div>
-            <div className="resumen__divisor" />
-            <div className="resumen__fila resumen__fila--total">
-              <span className="resumen__etiqueta">Total</span>
-              <span className="resumen__total">{formatearPrecio(total)}</span>
+            <div className="carrito__resumen-divisor" />
+            <div className="carrito__resumen-fila carrito__resumen-fila--total">
+              <span className="carrito__resumen-etiqueta">Total</span>
+              <span className="carrito__resumen-total">{formatearPrecio(total)}</span>
             </div>
             <Button variant="primary" onClick={() => navigate("/checkout")}>
               Pagar

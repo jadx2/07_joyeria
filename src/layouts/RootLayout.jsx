@@ -24,8 +24,8 @@ const RootLayout = () => {
       <main
         className={
           pathname === "/"
-            ? "layout__contenido"
-            : "layout__contenido layout__contenido--interior"
+            ? "disposicion__contenido"
+            : "disposicion__contenido disposicion__contenido--interior"
         }
       >
         <Outlet />

@@ -1,4 +1,4 @@
-.navigation {
+.navegacion {
   position: fixed;
   top: 0;
   left: 0;
@@ -17,14 +17,14 @@
     color var(--transition-media);
 }
 
-.navigation--con-scroll {
+.navegacion--con-scroll {
   background: var(--color-bg-translucido);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--color-border);
   color: var(--color-text);
 }
 
-.navigation__logo {
+.navegacion__logo {
   font-family: var(--font-display);
   font-size: 32px;
   letter-spacing: 0.2em;
@@ -33,21 +33,21 @@
   transition: color var(--transition);
 }
 
-.navigation__logo:hover {
+.navegacion__logo:hover {
   color: var(--color-accent);
 }
 
-.navigation--con-scroll .navigation__logo:hover,
-.navigation--interior .navigation__logo:hover {
+.navegacion--con-scroll .navegacion__logo:hover,
+.navegacion--interior .navegacion__logo:hover {
   color: var(--color-primary);
 }
 
-.navigation__enlaces {
+.navegacion__enlaces {
   display: flex;
   gap: 40px;
 }
 
-.navigation__link {
+.navegacion__link {
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -56,33 +56,33 @@
   transition: color var(--transition);
 }
 
-.navigation__link:hover {
+.navegacion__link:hover {
   color: var(--color-accent);
 }
 
-.navigation--con-scroll .navigation__link {
+.navegacion--con-scroll .navegacion__link {
   color: var(--color-text-muted);
 }
 
-.navigation--con-scroll .navigation__link:hover {
+.navegacion--con-scroll .navegacion__link:hover {
   color: var(--color-primary);
 }
 
-.navigation--interior {
+.navegacion--interior {
   background: var(--color-light);
   color: var(--color-text);
   border-bottom: 1px solid var(--color-border);
 }
 
-.navigation--interior .navigation__link {
+.navegacion--interior .navegacion__link {
   color: var(--color-text-muted);
 }
 
-.navigation--interior .navigation__link:hover {
+.navegacion--interior .navegacion__link:hover {
   color: var(--color-primary);
 }
 
-.navigation__carrito {
+.navegacion__carrito {
   position: relative;
   display: inline-flex;
   align-items: center;
@@ -90,16 +90,16 @@
   transition: color var(--transition);
 }
 
-.navigation__carrito:hover {
+.navegacion__carrito:hover {
   color: var(--color-accent);
 }
 
-.navigation--con-scroll .navigation__carrito:hover,
-.navigation--interior .navigation__carrito:hover {
+.navegacion--con-scroll .navegacion__carrito:hover,
+.navegacion--interior .navegacion__carrito:hover {
   color: var(--color-primary);
 }
 
-.navigation__contador {
+.navegacion__contador {
   position: absolute;
   top: -5px;
   right: -4px;
@@ -116,7 +116,7 @@
 }
 
 /* Hamburguesa: oculta en escritorio */
-.navigation__hamburguesa {
+.navegacion__hamburguesa {
   display: none;
   background: transparent;
   border: none;
@@ -126,17 +126,17 @@
   transition: color var(--transition);
 }
 
-.navigation__hamburguesa:hover {
+.navegacion__hamburguesa:hover {
   color: var(--color-accent);
 }
 
-.navigation--con-scroll .navigation__hamburguesa:hover,
-.navigation--interior .navigation__hamburguesa:hover {
+.navegacion--con-scroll .navegacion__hamburguesa:hover,
+.navegacion--interior .navegacion__hamburguesa:hover {
   color: var(--color-primary);
 }
 
 /* Panel móvil */
-.navigation__panel-movil {
+.navegacion__panel-movil {
   position: fixed;
   top: 80px;
   left: 0;
@@ -149,7 +149,7 @@
   padding: 32px 24px;
 }
 
-.navigation__link-movil {
+.navegacion__link-movil {
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -158,31 +158,31 @@
   transition: var(--transition);
 }
 
-.navigation__link-movil:hover {
+.navegacion__link-movil:hover {
   color: var(--color-primary);
 }
 
 /* Media query: móvil */
 @media (max-width: 768px) {
-  .navigation {
+  .navegacion {
     padding: 0 24px;
   }
 
-  .navigation__logo {
+  .navegacion__logo {
     font-size: 24px;
     letter-spacing: 0.12em;
   }
 
-  .navigation__enlaces {
+  .navegacion__enlaces {
     display: none;
   }
 
   /* Sin los enlaces, el carrito se iría al centro del space-between */
-  .navigation__carrito {
+  .navegacion__carrito {
     margin-left: auto;
   }
 
-  .navigation__hamburguesa {
+  .navegacion__hamburguesa {
     display: block;
     margin-left: var(--space-sm);
   }

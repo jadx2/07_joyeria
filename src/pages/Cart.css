@@ -23,7 +23,7 @@
   list-style: none;
 }
 
-.linea {
+.carrito__linea {
   display: flex;
   align-items: center;
   gap: 20px;
@@ -31,14 +31,14 @@
   border-bottom: 1px solid var(--color-border);
 }
 
-.linea__imagen {
+.carrito__linea-imagen {
   width: 96px;
   height: 96px;
   object-fit: cover;
   flex-shrink: 0;
 }
 
-.linea__info {
+.carrito__linea-info {
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -46,14 +46,14 @@
   min-width: 0;
 }
 
-.linea__nombre {
+.carrito__linea-nombre {
   color: var(--color-text);
   font-family: var(--font-display);
   font-size: 18px;
   line-height: 26px;
 }
 
-.linea__material {
+.carrito__linea-material {
   color: var(--color-text-muted);
   font-family: var(--font-body);
   font-size: 12px;
@@ -61,7 +61,7 @@
   letter-spacing: 0.3px;
 }
 
-.linea__quitar {
+.carrito__linea-quitar {
   align-self: flex-start;
   background: none;
   border: none;
@@ -76,21 +76,21 @@
   transition: color var(--transition);
 }
 
-.linea__quitar:hover {
+.carrito__linea-quitar:hover {
   color: var(--color-primary);
 }
 
-.linea__acciones {
+.carrito__linea-acciones {
   display: contents;
 }
 
-.linea__stepper {
+.carrito__linea-stepper {
   display: flex;
   flex-shrink: 0;
 }
 
-.linea__paso,
-.linea__cantidad {
+.carrito__linea-paso,
+.carrito__linea-cantidad {
   width: 32px;
   height: 32px;
   display: flex;
@@ -103,22 +103,22 @@
   font-size: 12px;
 }
 
-.linea__paso {
+.carrito__linea-paso {
   position: relative;
   background: none;
   cursor: pointer;
   transition: background var(--transition);
 }
 
-.linea__paso:hover {
+.carrito__linea-paso:hover {
   background: var(--color-bg-alt);
 }
 
-.linea__cantidad {
+.carrito__linea-cantidad {
   margin: 0 -1px;
 }
 
-.linea__total {
+.carrito__linea-total {
   width: 80px;
   flex-shrink: 0;
   color: var(--color-text);
@@ -129,7 +129,7 @@
 }
 
 /* ── Resumen del pedido ── */
-.resumen {
+.carrito__resumen {
   display: flex;
   flex-direction: column;
   gap: var(--space-sm);
@@ -137,7 +137,7 @@
   padding: 32px;
 }
 
-.resumen__titulo {
+.carrito__resumen-titulo {
   color: var(--color-primary);
   font-family: var(--font-body);
   font-size: 10px;
@@ -146,7 +146,7 @@
   text-transform: uppercase;
 }
 
-.resumen__fila {
+.carrito__resumen-fila {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -156,24 +156,24 @@
   letter-spacing: 0.3px;
 }
 
-.resumen__etiqueta {
+.carrito__resumen-etiqueta {
   color: var(--color-text-muted);
 }
 
-.resumen__valor {
+.carrito__resumen-valor {
   color: var(--color-text);
 }
 
-.resumen__divisor {
+.carrito__resumen-divisor {
   height: 1px;
   background: var(--color-border);
 }
 
-.resumen__fila--total .resumen__etiqueta {
+.carrito__resumen-fila--total .carrito__resumen-etiqueta {
   color: var(--color-text);
 }
 
-.resumen__total {
+.carrito__resumen-total {
   color: var(--color-text);
   font-family: var(--font-display);
   font-size: 24px;
@@ -217,11 +217,11 @@
 }
 
 @media (max-width: 767px) {
-  .linea {
+  .carrito__linea {
     flex-wrap: wrap;
   }
 
-  .linea__acciones {
+  .carrito__linea-acciones {
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -229,7 +229,7 @@
     padding-left: 116px;
   }
 
-  .linea__paso::after {
+  .carrito__linea-paso::after {
     content: "";
     position: absolute;
     inset: -6px;

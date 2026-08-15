@@ -25,29 +25,29 @@ const Hero = () => {
   const slideActivo = slidesHero[slideActual]
 
   return (
-    <section className="hero">
+    <section className="heroe">
       {slidesHero.map((slide, indice) => (
         <div
           key={slide.id}
-          className="hero__diapositiva"
+          className="heroe__diapositiva"
           style={{ opacity: indice === slideActual ? 1 : 0 }}
           aria-hidden={indice !== slideActual}
         >
-          <img src={slide.imagen} alt={slide.alt} className="hero__fondo" />
+          <img src={slide.imagen} alt={slide.alt} className="heroe__fondo" />
         </div>
       ))}
-      <div className="hero__velo" />
-      <div className="hero__contenido">
-        <p className="hero__etiqueta">{slideActivo.subtitulo}</p>
-        <h1 className="hero__titulo">{slideActivo.titulo}</h1>
-        <p className="hero__descripcion">{slideActivo.descripcion}</p>
-        <div className="hero__accion">
+      <div className="heroe__velo" />
+      <div className="heroe__contenido">
+        <p className="heroe__etiqueta">{slideActivo.subtitulo}</p>
+        <h1 className="heroe__titulo">{slideActivo.titulo}</h1>
+        <p className="heroe__descripcion">{slideActivo.descripcion}</p>
+        <div className="heroe__accion">
           <Button variant="light">{slideActivo.cta}</Button>
         </div>
       </div>
       <button
         type="button"
-        className="hero__flecha hero__flecha--izquierda"
+        className="heroe__flecha heroe__flecha--izquierda"
         onClick={slideAnterior}
         aria-label="Slide anterior"
       >
@@ -55,18 +55,18 @@ const Hero = () => {
       </button>
       <button
         type="button"
-        className="hero__flecha hero__flecha--derecha"
+        className="heroe__flecha heroe__flecha--derecha"
         onClick={siguienteSlide}
         aria-label="Siguiente slide"
       >
         <LuChevronRight size={15} />
       </button>
-      <div className="hero__puntos">
+      <div className="heroe__puntos">
         {slidesHero.map((slide, indice) => (
           <button
             key={slide.id}
             type="button"
-            className={`hero__punto ${indice === slideActual ? "hero__punto--activo" : ""}`}
+            className={`heroe__punto ${indice === slideActual ? "heroe__punto--activo" : ""}`}
             onClick={() => setSlideActual(indice)}
             aria-label={`Ir al slide ${indice + 1}`}
           />

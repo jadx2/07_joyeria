@@ -7,31 +7,31 @@ import { colecciones } from "../../data/colecciones"
 
 const desplazamientos = [
   "",
-  "collections__item--desplazado-grande",
+  "colecciones__item--desplazado-grande",
   "",
-  "collections__item--desplazado-pequeno",
+  "colecciones__item--desplazado-pequeno",
 ]
 
 const Collections = () => {
   return (
-    <section className="collections" id="collections">
+    <section className="colecciones" id="collections">
       <Container>
-        <div className="collections__encabezado">
+        <div className="colecciones__encabezado">
           <SectionHeading eyebrow="Nuestras colecciones">
             Hechas para
             <br />
             <em>cada ocasión</em>
           </SectionHeading>
-          <a href="#" className="collections__enlace">
+          <a href="#" className="colecciones__enlace">
             Ver todo
-            <LuArrowRight size={12} className="collections__enlace-icono" />
+            <LuArrowRight size={12} className="colecciones__enlace-icono" />
           </a>
         </div>
-        <div className="collections__grilla">
+        <div className="colecciones__grilla">
           {colecciones.map((coleccion, indice) => (
             <div
               key={coleccion.id}
-              className={`collections__item ${desplazamientos[indice]}`}
+              className={`colecciones__item ${desplazamientos[indice]}`}
             >
               <CollectionCard
                 {...coleccion}

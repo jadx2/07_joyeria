@@ -6,31 +6,31 @@ import { enlacesLegales } from "../../data/enlacesLegales"
 
 const Footer = () => {
   return (
-    <footer className="footer">
+    <footer className="pie">
       <Container>
-        <div className="footer__columnas">
-          <div className="footer__marca">
-            <p className="footer__marca-nombre">Beautiful Princess</p>
-            <p className="footer__marca-descripcion">
+        <div className="pie__columnas">
+          <div className="pie__marca">
+            <p className="pie__marca-nombre">Beautiful Princess</p>
+            <p className="pie__marca-descripcion">
               Joyería hecha a mano para quienes valoran la intención por encima
               del exceso. Hecha en el Perú desde 2016.
             </p>
-            <div className="footer__redes">
-              <a href="#" aria-label="Instagram" className="footer__red">
+            <div className="pie__redes">
+              <a href="#" aria-label="Instagram" className="pie__red">
                 <FaInstagram size={15} />
               </a>
-              <a href="#" aria-label="Facebook" className="footer__red">
+              <a href="#" aria-label="Facebook" className="pie__red">
                 <FaFacebookF size={15} />
               </a>
             </div>
           </div>
           {enlacesFooter.map((columna) => (
-            <div className="footer__columna" key={columna.titulo}>
-              <h3 className="footer__columna-titulo">{columna.titulo}</h3>
-              <ul className="footer__enlaces">
+            <div className="pie__columna" key={columna.titulo}>
+              <h3 className="pie__columna-titulo">{columna.titulo}</h3>
+              <ul className="pie__enlaces">
                 {columna.enlaces.map((enlace) => (
                   <li key={enlace}>
-                    <a href="#" className="footer__enlace">
+                    <a href="#" className="pie__enlace">
                       {enlace}
                     </a>
                   </li>
@@ -39,14 +39,14 @@ const Footer = () => {
             </div>
           ))}
         </div>
-        <div className="footer__inferior">
-          <p className="footer__copyright">
+        <div className="pie__inferior">
+          <p className="pie__copyright">
             © 2026 Beautiful Princess. Todos los derechos reservados.
           </p>
-          <ul className="footer__legales">
+          <ul className="pie__legales">
             {enlacesLegales.map((enlace) => (
               <li key={enlace}>
-                <a href="#" className="footer__enlace-legal">
+                <a href="#" className="pie__enlace-legal">
                   {enlace}
                 </a>
               </li>

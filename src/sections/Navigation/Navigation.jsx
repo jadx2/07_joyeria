@@ -44,36 +44,36 @@ const Navigation = () => {
       ? `${totalUnidades} ${totalUnidades === 1 ? "artículo" : "artículos"} en el carrito`
       : "Carrito"
 
-  const clases = ["navigation"]
+  const clases = ["navegacion"]
   if (conScroll) {
-    clases.push("navigation--con-scroll")
+    clases.push("navegacion--con-scroll")
   }
   if (!esHome) {
-    clases.push("navigation--interior")
+    clases.push("navegacion--interior")
   }
 
   return (
     <header className={clases.join(" ")}>
       <Link
         to="/"
-        className="navigation__logo"
+        className="navegacion__logo"
         onClick={() => setMenuAbierto(false)}
       >
         BEAUTIFUL PRINCESS
       </Link>
 
-      <nav className="navigation__enlaces">
+      <nav className="navegacion__enlaces">
         {enlaces.map((enlace) =>
           enlace.destino ? (
             <Link
               key={enlace.texto}
               to={enlace.destino}
-              className="navigation__link"
+              className="navegacion__link"
             >
               {enlace.texto}
             </Link>
           ) : (
-            <a key={enlace.texto} href="#" className="navigation__link">
+            <a key={enlace.texto} href="#" className="navegacion__link">
               {enlace.texto}
             </a>
           ),
@@ -82,18 +82,18 @@ const Navigation = () => {
 
       <Link
         to="/cart"
-        className="navigation__carrito"
+        className="navegacion__carrito"
         aria-label={etiquetaCarrito}
         onClick={() => setMenuAbierto(false)}
       >
         <LuShoppingBag size={24} />
         {totalUnidades > 0 && (
-          <span className="navigation__contador">{totalUnidades}</span>
+          <span className="navegacion__contador">{totalUnidades}</span>
         )}
       </Link>
 
       <button
-        className="navigation__hamburguesa"
+        className="navegacion__hamburguesa"
         onClick={() => setMenuAbierto(!menuAbierto)}
         aria-label={menuAbierto ? "Cerrar menú" : "Abrir menú"}
         aria-expanded={menuAbierto}
@@ -102,13 +102,13 @@ const Navigation = () => {
       </button>
 
       {menuAbierto && (
-        <div className="navigation__panel-movil">
+        <div className="navegacion__panel-movil">
           {enlaces.map((enlace) =>
             enlace.destino ? (
               <Link
                 key={enlace.texto}
                 to={enlace.destino}
-                className="navigation__link-movil"
+                className="navegacion__link-movil"
                 onClick={() => setMenuAbierto(false)}
               >
                 {enlace.texto}
@@ -117,7 +117,7 @@ const Navigation = () => {
               <a
                 key={enlace.texto}
                 href="#"
-                className="navigation__link-movil"
+                className="navegacion__link-movil"
                 onClick={() => setMenuAbierto(false)}
               >
                 {enlace.texto}

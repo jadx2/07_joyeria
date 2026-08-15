@@ -15,20 +15,20 @@ const Newsletter = () => {
   }
 
   return (
-    <section className="newsletter">
+    <section className="boletin">
       <SectionHeading eyebrow="Círculo privado" align="center">
         Acceso anticipado, siempre
       </SectionHeading>
-      <p className="newsletter__descripcion">
+      <p className="boletin__descripcion">
         Únete a nuestro círculo privado para acceso anticipado a nuevas
         colecciones, eventos exclusivos y las historias detrás de cada pieza.
       </p>
       {suscrito ? (
-        <div className="newsletter__exito" aria-live="polite">
+        <div className="boletin__exito" aria-live="polite">
           <p>Gracias por unirte.</p>
         </div>
       ) : (
-        <form className="newsletter__formulario" onSubmit={manejarEnvio}>
+        <form className="boletin__formulario" onSubmit={manejarEnvio}>
           <label htmlFor="correo" className="visualmente-oculto">
             Correo electrónico
           </label>
@@ -38,12 +38,12 @@ const Newsletter = () => {
             value={correo}
             onChange={(evento) => setCorreo(evento.target.value)}
             placeholder="Tu correo electrónico"
-            className="newsletter__input"
+            className="boletin__input"
           />
           <Button variant="primary">Unirme ahora</Button>
         </form>
       )}
-      <p className="newsletter__nota">Sin spam. Cancela cuando quieras.</p>
+      <p className="boletin__nota">Sin spam. Cancela cuando quieras.</p>
     </section>
   )
 }

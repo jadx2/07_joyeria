@@ -1,4 +1,4 @@
-.hero {
+.heroe {
   position: relative;
   height: 78vh;
   min-height: 520px;
@@ -6,19 +6,19 @@
   background-color: var(--color-text);
 }
 
-.hero__diapositiva {
+.heroe__diapositiva {
   position: absolute;
   inset: 0;
   transition: opacity var(--transition-fundido);
 }
 
-.hero__fondo {
+.heroe__fondo {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.hero__velo {
+.heroe__velo {
   position: absolute;
   inset: 0;
   background: linear-gradient(
@@ -29,7 +29,7 @@
   );
 }
 
-.hero__contenido {
+.heroe__contenido {
   position: absolute;
   left: 0;
   right: 0;
@@ -40,14 +40,14 @@
   z-index: 10;
 }
 
-.hero__etiqueta {
+.heroe__etiqueta {
   font-size: 10px;
   text-transform: uppercase;
   letter-spacing: 0.35em;
   color: var(--color-accent);
 }
 
-.hero__titulo {
+.heroe__titulo {
   font-family: var(--font-display);
   font-size: clamp(2.8rem, 6vw, 5rem);
   line-height: 1;
@@ -56,17 +56,17 @@
   margin-top: var(--space-sm);
 }
 
-.hero__descripcion {
+.heroe__descripcion {
   font-size: 14px;
   color: var(--color-sobre-foto);
   margin-top: var(--space-sm);
 }
 
-.hero__accion {
+.heroe__accion {
   margin-top: var(--space-md);
 }
 
-.hero__flecha {
+.heroe__flecha {
   width: 40px;
   height: 40px;
   border: 1px solid rgba(255, 255, 255, 0.4);
@@ -84,19 +84,19 @@
   transition: background-color var(--transition);
 }
 
-.hero__flecha--izquierda {
+.heroe__flecha--izquierda {
   left: 32px;
 }
 
-.hero__flecha--derecha {
+.heroe__flecha--derecha {
   right: 32px;
 }
 
-.hero__flecha:hover {
+.heroe__flecha:hover {
   background-color: rgba(255, 255, 255, 0.15);
 }
 
-.hero__puntos {
+.heroe__puntos {
   position: absolute;
   bottom: 20px;
   left: 50%;
@@ -107,7 +107,7 @@
   z-index: 10;
 }
 
-.hero__punto {
+.heroe__punto {
   width: 12px;
   height: 1px;
   background-color: rgba(255, 255, 255, 0.4);
@@ -120,43 +120,43 @@
     background-color var(--transition);
 }
 
-.hero__punto::after {
+.heroe__punto::after {
   content: "";
   position: absolute;
   inset: -10px 0;
 }
 
-.hero__punto:hover {
+.heroe__punto:hover {
   background-color: var(--color-accent);
 }
 
-.hero__punto--activo {
+.heroe__punto--activo {
   width: 40px;
   background-color: var(--color-accent);
 }
 
 /* Media query: móvil */
 @media (max-width: 767px) {
-  .hero {
+  .heroe {
     height: 70vh;
     min-height: 480px;
   }
 
-  .hero__contenido {
+  .heroe__contenido {
     padding-left: 24px;
     padding-right: 24px;
   }
 
-  .hero__flecha {
+  .heroe__flecha {
     display: none;
   }
 
-  .hero__puntos {
+  .heroe__puntos {
     bottom: 32px;
   }
 
   /* Área táctil de ~44px para tocar con el dedo */
-  .hero__punto::after {
+  .heroe__punto::after {
     inset: -20px -16px;
   }
 }

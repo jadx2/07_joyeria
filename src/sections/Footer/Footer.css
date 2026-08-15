@@ -1,20 +1,20 @@
-.footer {
+.pie {
   padding: var(--space-xl) 0 32px;
   background: var(--color-bg-alt);
   border-top: 1px solid var(--color-border);
 }
 
-.footer__columnas {
+.pie__columnas {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: var(--space-lg);
 }
 
-.footer__marca {
+.pie__marca {
   grid-column: span 2;
 }
 
-.footer__marca-nombre {
+.pie__marca-nombre {
   font-family: var(--font-display);
   font-size: 24px;
   letter-spacing: 4.8px;
@@ -22,31 +22,31 @@
   margin-bottom: var(--space-sm);
 }
 
-.footer__marca-descripcion {
+.pie__marca-descripcion {
   max-width: 320px;
   font-size: 14px;
   color: var(--color-text-muted);
   margin-bottom: var(--space-sm);
 }
 
-.footer__redes {
+.pie__redes {
   display: flex;
   gap: var(--space-sm);
   color: var(--color-text-muted);
 }
 
-.footer__red {
+.pie__red {
   color: inherit;
   display: flex;
   cursor: pointer;
   transition: color var(--transition);
 }
 
-.footer__red:hover {
+.pie__red:hover {
   color: var(--color-text);
 }
 
-.footer__columna-titulo {
+.pie__columna-titulo {
   font-family: var(--font-body);
   font-size: 10px;
   text-transform: uppercase;
@@ -55,7 +55,7 @@
   margin-bottom: var(--space-sm);
 }
 
-.footer__enlaces {
+.pie__enlaces {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -64,7 +64,7 @@
   gap: 12px;
 }
 
-.footer__enlace {
+.pie__enlace {
   font-size: 14px;
   color: var(--color-text-muted);
   text-decoration: none;
@@ -72,11 +72,11 @@
   transition: color var(--transition);
 }
 
-.footer__enlace:hover {
+.pie__enlace:hover {
   color: var(--color-text);
 }
 
-.footer__inferior {
+.pie__inferior {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -85,12 +85,12 @@
   border-top: 1px solid var(--color-border);
 }
 
-.footer__copyright {
+.pie__copyright {
   font-size: 11px;
   color: var(--color-text-muted);
 }
 
-.footer__legales {
+.pie__legales {
   display: flex;
   gap: 24px;
   list-style: none;
@@ -98,7 +98,7 @@
   padding: 0;
 }
 
-.footer__enlace-legal {
+.pie__enlace-legal {
   font-size: 11px;
   color: var(--color-text-muted);
   text-decoration: none;
@@ -106,36 +106,36 @@
   transition: color var(--transition);
 }
 
-.footer__enlace-legal:hover {
+.pie__enlace-legal:hover {
   color: var(--color-text);
 }
 
 @media (max-width: 1023px) {
-  .footer__columnas {
+  .pie__columnas {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .footer__marca {
+  .pie__marca {
     grid-column: span 3;
   }
 }
 
 @media (max-width: 767px) {
-  .footer__columnas {
+  .pie__columnas {
     grid-template-columns: repeat(2, 1fr);
     gap: var(--space-lg);
   }
 
-  .footer__marca {
+  .pie__marca {
     grid-column: span 2;
   }
 
-  .footer__marca-nombre {
+  .pie__marca-nombre {
     font-size: 18px;
     letter-spacing: 3px;
   }
 
-  .footer__inferior {
+  .pie__inferior {
     flex-direction: column;
     align-items: center;
     text-align: center;

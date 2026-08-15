@@ -70,15 +70,15 @@ const Checkout = () => {
         <div className="pago__contenido">
           <form className="pago__formulario" onSubmit={manejarEnvio} noValidate>
             <p className="pago__eyebrow">Contacto</p>
-            <div className="campo">
-              <label className="campo__etiqueta" htmlFor="nombre">
+            <div className="pago__campo">
+              <label className="pago__campo-etiqueta" htmlFor="nombre">
                 Nombre completo
               </label>
               <input
                 id="nombre"
                 type="text"
-                className={`campo__input${
-                  errores.nombre ? " campo__input--error" : ""
+                className={`pago__campo-input${
+                  errores.nombre ? " pago__campo-input--error" : ""
                 }`}
                 value={nombre}
                 onChange={(evento) => setNombre(evento.target.value)}
@@ -86,20 +86,20 @@ const Checkout = () => {
                 aria-describedby={errores.nombre ? "nombre-error" : undefined}
               />
               {errores.nombre && (
-                <p className="campo__error" id="nombre-error">
+                <p className="pago__campo-error" id="nombre-error">
                   {errores.nombre}
                 </p>
               )}
             </div>
-            <div className="campo">
-              <label className="campo__etiqueta" htmlFor="correo">
+            <div className="pago__campo">
+              <label className="pago__campo-etiqueta" htmlFor="correo">
                 Correo
               </label>
               <input
                 id="correo"
                 type="email"
-                className={`campo__input${
-                  errores.correo ? " campo__input--error" : ""
+                className={`pago__campo-input${
+                  errores.correo ? " pago__campo-input--error" : ""
                 }`}
                 value={correo}
                 onChange={(evento) => setCorreo(evento.target.value)}
@@ -107,13 +107,13 @@ const Checkout = () => {
                 aria-describedby={errores.correo ? "correo-error" : undefined}
               />
               {errores.correo && (
-                <p className="campo__error" id="correo-error">
+                <p className="pago__campo-error" id="correo-error">
                   {errores.correo}
                 </p>
               )}
             </div>
             {errores.envio && (
-              <p className="campo__error" id="envio-error">
+              <p className="pago__campo-error" id="envio-error">
                 {errores.envio}
               </p>
             )}
