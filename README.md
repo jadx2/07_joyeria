@@ -1,6 +1,6 @@
 # 07_joyeria
 
-<!-- TODO: arrastrar aquí una captura de la página completa, ej. docs/captura.png -->
+![Captura del sitio](docs/captura.png)
 
 **[Ver el sitio en vivo →](https://joyeria-eight.vercel.app/)**
 
