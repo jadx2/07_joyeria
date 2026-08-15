@@ -38,6 +38,12 @@
 .footer__red {
   color: inherit;
   display: flex;
+  cursor: pointer;
+  transition: color var(--transition);
+}
+
+.footer__red:hover {
+  color: var(--color-text);
 }
 
 .footer__columna-titulo {
@@ -62,6 +68,7 @@
   font-size: 14px;
   color: var(--color-text-muted);
   text-decoration: none;
+  cursor: pointer;
   transition: color var(--transition);
 }
 
@@ -95,6 +102,7 @@
   font-size: 11px;
   color: var(--color-text-muted);
   text-decoration: none;
+  cursor: pointer;
   transition: color var(--transition);
 }
 

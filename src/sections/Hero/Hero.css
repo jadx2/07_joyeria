@@ -9,7 +9,7 @@
 .hero__diapositiva {
   position: absolute;
   inset: 0;
-  transition: opacity 1000ms ease;
+  transition: opacity var(--transition-fundido);
 }
 
 .hero__fondo {
@@ -124,6 +124,10 @@
   content: "";
   position: absolute;
   inset: -10px 0;
+}
+
+.hero__punto:hover {
+  background-color: var(--color-accent);
 }
 
 .hero__punto--activo {

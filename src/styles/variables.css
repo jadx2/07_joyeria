@@ -32,6 +32,9 @@
 
   /* ── Otros ── */
   --transition: 300ms ease;
+  --transition-media: 500ms ease;
+  --transition-lenta: 700ms ease;
+  --transition-fundido: 1000ms ease;
 }
 
 @media (max-width: 767px) {
