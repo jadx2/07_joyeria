@@ -186,16 +186,16 @@ No hardcodear colores ni tamaños: si falta un valor, se agrega ahí primero.
 
 ### Colores
 
-| Variable             | Valor                       | Uso                           |
-| -------------------- | --------------------------- | ----------------------------- |
-| `--color-bg`         | `#faf7f2`                   | Fondo general, marfil         |
-| `--color-bg-alt`     | `#efe7d6`                   | Fondo de secciones alternas   |
-| `--color-text`       | `#1c1a16`                   | Texto principal, casi negro   |
-| `--color-text-muted` | `#7a6e5f`                   | Texto secundario, gris cálido |
-| `--color-primary`    | `#b8976a`                   | Oro principal                 |
-| `--color-accent`     | `#c9a96e`                   | Oro claro, para detalles      |
-| `--color-light`      | `#faf7f2`                   | Texto sobre fondo oscuro      |
-| `--color-border`     | `rgba(184, 151, 106, 0.25)` | Bordes sutiles                |
+| Muestra                                                   | Variable             | Valor                       | Uso                           |
+| ---------------------------------------------------------- | -------------------- | --------------------------- | ----------------------------- |
+| ![](https://placehold.co/15x15/faf7f2/faf7f2.png)         | `--color-bg`         | `#faf7f2`                   | Fondo general, marfil         |
+| ![](https://placehold.co/15x15/efe7d6/efe7d6.png)         | `--color-bg-alt`     | `#efe7d6`                   | Fondo de secciones alternas   |
+| ![](https://placehold.co/15x15/1c1a16/1c1a16.png)         | `--color-text`       | `#1c1a16`                   | Texto principal, casi negro   |
+| ![](https://placehold.co/15x15/7a6e5f/7a6e5f.png)         | `--color-text-muted` | `#7a6e5f`                   | Texto secundario, gris cálido |
+| ![](https://placehold.co/15x15/b8976a/b8976a.png)         | `--color-primary`    | `#b8976a`                   | Oro principal                 |
+| ![](https://placehold.co/15x15/c9a96e/c9a96e.png)         | `--color-accent`     | `#c9a96e`                   | Oro claro, para detalles      |
+| ![](https://placehold.co/15x15/faf7f2/faf7f2.png)         | `--color-light`      | `#faf7f2`                   | Texto sobre fondo oscuro      |
+| ![](https://placehold.co/15x15/b8976a/b8976a.png)         | `--color-border`     | `rgba(184, 151, 106, 0.25)` | Bordes sutiles                |
 
 ### Tipografías
 
@@ -252,7 +252,7 @@ de nombres, BEM, y el flujo de ramas y PRs.
 | Integrante           | GitHub                                               | Aporte                                                                                                                                                                                                          |
 | -------------------- | ---------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Jaim Delmar (líder)  | [@jadx2](https://github.com/jadx2)                   | Setup del proyecto, sistema de diseño, rutas, estado del carrito, pagos con Stripe, correo de confirmación y despliegue — [issues](https://github.com/jadx2/07_joyeria/issues?q=is%3Aissue+assignee%3Ajadx2)    |
-| Carolin Narro Garcia | [@Carolin26](https://github.com/Carolin26)           | Componentes Tag, SectionHeading y Container, imágenes del proyecto, testimonios y responsive de la tienda — [issues](https://github.com/jadx2/07_joyeria/issues?q=is%3Aissue+assignee%3ACarolin26)              |
-| vilchez-lan          | [@vilchez-lan](https://github.com/vilchez-lan)       | Navegación de escritorio y menú móvil, responsive de navegación, hero y colecciones — [issues](https://github.com/jadx2/07_joyeria/issues?q=is%3Aissue+assignee%3Avilchez-lan)                                  |
-| GraceKelly1993       | [@GraceKelly1993](https://github.com/GraceKelly1993) | Componentes Button y CollectionCard, Hero, Featured Piece, Footer, Newsletter y responsive del resto de secciones — [issues](https://github.com/jadx2/07_joyeria/issues?q=is%3Aissue+assignee%3AGraceKelly1993) |
-| Bethzy               | [@Bethzy1994](https://github.com/Bethzy1994)         | Accesibilidad básica y consistencia de hovers y transiciones — [issues](https://github.com/jadx2/07_joyeria/issues?q=is%3Aissue+assignee%3ABethzy1994)                                                          |
+| Joy Carolin Narro Garcia    | [@Carolin26](https://github.com/Carolin26)           | Componentes Tag, SectionHeading y Container, imágenes del proyecto, testimonios y responsive de la tienda — [issues](https://github.com/jadx2/07_joyeria/issues?q=is%3Aissue+assignee%3ACarolin26)              |
+| Ratsinller Franco Vilchez   | [@vilchez-lan](https://github.com/vilchez-lan)       | Navegación de escritorio y menú móvil, responsive de navegación, hero y colecciones — [issues](https://github.com/jadx2/07_joyeria/issues?q=is%3Aissue+assignee%3Avilchez-lan)                                  |
+| Grace Kelly Davila Santa Cruz | [@GraceKelly1993](https://github.com/GraceKelly1993) | Componentes Button y CollectionCard, Hero, Featured Piece, Footer, Newsletter y responsive del resto de secciones — [issues](https://github.com/jadx2/07_joyeria/issues?q=is%3Aissue+assignee%3AGraceKelly1993) |
+| Bethzy Mamani Incahuanaco   | [@Bethzy1994](https://github.com/Bethzy1994)         | Accesibilidad básica y consistencia de hovers y transiciones — [issues](https://github.com/jadx2/07_joyeria/issues?q=is%3Aissue+assignee%3ABethzy1994)                                                          |
